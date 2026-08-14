@@ -1,14 +1,15 @@
+from inventory import add_item
+
 Book_of_Vision = False
 Book_of_Nature = False
 Book_of_Time = False
 Book_of_Wisdom = False
 read_all_books = False
-has_dried_flower = False
 
 
 def reading_of_books():
     global Book_of_Vision, Book_of_Nature, Book_of_Time, Book_of_Wisdom
-    global read_all_books, has_dried_flower
+    global read_all_books
 
     print("\n\"Time is still, yet it moves when you are not looking.\"\n")
 
@@ -49,7 +50,7 @@ def reading_of_books():
                 print("Its title is barely legible: 'Book of the Forgotten'.")
                 print("Inside, a dried flower is pressed between two yellowed pages.")
                 print("\nNew item obtained: DRIED FLOWER")
-                has_dried_flower = True
+                add_item("Dried Flower")
 
         except ValueError:
             print("Please enter a number.")
