@@ -7,6 +7,13 @@ def add_item(item_name):
     else:
         print(f"\nYou already have the {item_name}.")
 
+def remove_item(item_name):
+    if item_name in inventory:
+        inventory.remove(item_name)
+        print(f"\nYou no longer have the {item_name}.")
+    else:
+        print(f"\nYou don't have the {item_name}.")
+
 def has_item(item_name):
     return item_name in inventory
 

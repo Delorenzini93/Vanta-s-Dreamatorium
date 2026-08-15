@@ -1,4 +1,4 @@
-from inventory import add_item
+from inventory import add_item, remove_item, has_item
 
 Book_of_Vision = False
 Book_of_Nature = False
