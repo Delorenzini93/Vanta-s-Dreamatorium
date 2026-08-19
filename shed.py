@@ -1,7 +1,7 @@
 import Status
 import battle
 
-def shed():
+def shed_battle():
     print("A cold and misty smell lies before you.")
     print("Something moves in the background...")
 
@@ -21,4 +21,4 @@ def shed():
     else:
         print("\nThe remains of the training dummy lie on the ground.")
 
-shed()
+shed_battle()
