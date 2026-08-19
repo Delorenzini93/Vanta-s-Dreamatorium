@@ -4,6 +4,8 @@ place = "Garam"
 
 print(f"{x}: Tell me your name:")
 user = input("\nI...I am...")
+import Status
+Status.user = user
 
 def introduction():
 
