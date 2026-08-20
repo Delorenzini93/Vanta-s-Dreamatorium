@@ -1,10 +1,11 @@
 from inventory import add_item, remove_item, has_item
 import Status
+from farm import farm_menu
 
 open_sheds_door = False
 
 def farm_minigame():
-    pass
+    farm_menu()
 
 def outdoor_garden():
     global open_sheds_door
