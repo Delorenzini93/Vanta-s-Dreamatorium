@@ -20,5 +20,6 @@ enemy_defeated = {
     "Undead": False,
     "Glass Entity": False,
     "Shadows": False,
-    "Galerian": False
+    "Galerian": False,
+    "Foul Ghoul": False
 }
