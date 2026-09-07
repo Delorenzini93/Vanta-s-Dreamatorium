@@ -13,6 +13,9 @@ current_chest_armor = "No Armor"
 current_boots = "No Boots"
 current_accesory = "No Accesory"
 
+is_daylight = True
+is_candles_lit = False
+
 
 enemy_defeated = {
     "dummy": False,

@@ -3,7 +3,6 @@ import Status
 import battle
 import Cauldron
 
-is_daylight = False
 is_talked_to_winky = False
 is_talked_to_rosmerta = False
 is_rosmerta_happy = False
@@ -128,10 +127,10 @@ def dining_room():
             elif answer == 2:
                 window_look_count += 1
                 if window_look_count % 2 == 0:
-                    is_daylight = True
+                    Status.is_daylight = True
                     print("The sun peeks through the clouds again...")
                 else:
-                    is_daylight = False
+                    Status.is_daylight = False
                     print("The clouds are getting darker, nightfall will soon be upon us...")
                 continue
             elif answer == 3:

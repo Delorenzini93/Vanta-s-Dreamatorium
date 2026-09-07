@@ -1,5 +1,7 @@
 inventory = []
 
+
+
 def add_item(item_name):
     if item_name not in inventory:
         inventory.append(item_name)
@@ -25,3 +27,13 @@ def show_inventory():
         for item in inventory:
             print(f"- {item}")
         print("----------------")
+
+battle_items = {
+    "Potion": {"type": "heal", "value": 50, "description": "Restores 50 HP"},
+    "Amine": {"type": "speed", "value": 10, "duration": 3, "description": "Increases evasion for 3 turns"},
+}
+
+item_descriptions = {
+    "Potion": "Restores 30 HP.",
+    "Amine": "Temporarily increases evasion.",
+}

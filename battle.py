@@ -1,5 +1,6 @@
 import random
 import Status
+from inventory import show_inventory, has_item, remove_item, battle_items
 
 def battle(enemy_name, enemy_hp, enemy_attack):
     player_hp = Status.player_hp
@@ -20,11 +21,38 @@ def battle(enemy_name, enemy_hp, enemy_attack):
             print("1. Strong Attack")
             print("2. Normal Attack")
             print("3. Special Attack")
+            print("4. Use Item")
 
             try:
-                choice = int(input("\nChoose your attack: "))
+                choice = int(input("\nChoose your action: "))
+
+                if choice == 4:
+                    show_inventory()
+                    item_name = input("Which item do you want to use? ").strip()
+
+                    if not has_item(item_name):
+                        print("You don't have that item.")
+                        continue
+
+                    if item_name not in battle_items:
+                        print("You can't use that in battle.")
+                        continue
+
+                    item = battle_items[item_name]
+                    remove_item(item_name)
+
+                    if item["type"] == "heal":
+                        player_hp = min(100, player_hp + item["value"])
+                        print(f"You used {item_name}! Restored {item['value']} HP. Current HP: {player_hp}")
+
+                    elif item["type"] == "speed":
+                        Status.player_speed += item["value"]
+                        print(f"You used {item_name}! Evasion increased for {item['duration']} turns.")
+
+                    continue  # usa item sin gastar turno
+
                 if choice not in attacks:
-                    print("Choose between 1 and 3.")
+                    print("Choose between 1 and 4.")
                     continue
 
                 name, damage = attacks[choice]

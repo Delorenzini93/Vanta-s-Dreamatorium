@@ -12,14 +12,15 @@ def echoing_puzzle():
     global talked_to_gargoyle
     print("A small, dead-ended and windowless corridor lies before you.")
     print("By your left there are 3 door each one containig a prisoner soul.")
-    print("By your right there's a judging Gargoyle")
+    print("By your right there's a judging Gargoyle with a flaming torch by his side")
 
     while True:
         print(f"\n1. Speak to the {x}")
         print("2. Speak with closest prisoner")
         print("3. Speak with middle prisoner")
         print("4. Speak with furthest prisoner")
-        print("5. Leave the corridor")
+        print("5. Touch the torch's flame")
+        print("6. Leave the corridor")
 
         try:
             answer = int(input("\nWhat should I say? "))
@@ -62,6 +63,15 @@ def echoing_puzzle():
                 continue
 
             elif answer == 5:
+                if has_item('Candles'):
+                    print("The candles are now lit!")
+                    Status.is_candles_lit = True
+                    continue
+                else:
+                    print('Seems like a pretty dangerous idea, to be honest...')
+                    continue
+
+            elif answer == 6:
                 print("\nYou step away from the echoing corridor for now.")
                 return
 
