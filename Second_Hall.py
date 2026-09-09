@@ -1,4 +1,5 @@
 from inventory import add_item, remove_item, has_item
+import Status
 
 is_eagle_key_solved = False
 is_vanta_key_solved = False
