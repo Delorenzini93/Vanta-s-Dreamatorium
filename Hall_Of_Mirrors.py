@@ -12,6 +12,7 @@ is_west_wing_knight_down = False
 is_left_wing_knight_down = False
 is_hero_free = False
 is_circular_mirror_flicked = False
+is_flick_chest_open = False
 
 def left_wing_knight_battle():
     pass
@@ -224,7 +225,7 @@ def central_wing():
             print("Choose a valid option")
 #############################################
 def west_wing():
-    global is_west_wing_knight_down
+    global is_west_wing_knight_down, is_flick_chest_open, is_circular_mirror_flicked
     print("\nThe air still feels cold here...")
 
     while True:
@@ -249,6 +250,17 @@ def west_wing():
                 print("You now move to your left, more flickering lights from the mirrors echoes your move")
                 central_west_wing()
             elif answer == 3:
+                if not is_circular_mirror_flicked:
+                    if is_flick_chest_open:
+                        print("I already opened this chest, there's nothing here")
+                        continue
+                    else:
+                        print("You founnd a chest!")
+                        print("You found $5000!")
+                        Status.souls += 5000
+                        is_flick_chest_open = True
+                        print("I already opened this chest, there's nothing here")
+                        continue
                 print("There's a huge mirror preventing further move")
                 continue
             elif answer == 4:
