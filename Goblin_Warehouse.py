@@ -13,6 +13,9 @@ is_pond_talk = False
 is_journal_talk = False
 is_discover_recipe = False
 
+#import Heroes
+#Heroes.find_hero("Aldric")
+#########################
 def goblin_warehouse_second_part():
     global is_pond_talk, is_journal_talk, is_discover_recipe
     print("There's a well with clear water flowing, an old pile of books and what seems to be a chess game of some sort")
@@ -36,7 +39,7 @@ def goblin_warehouse_second_part():
             elif answer == 2:
                 if is_journal_talk:
                     import Heroes
-                    Heroes.catalog()
+                    Heroes.heroes_catalog()
 
                 if not is_journal_talk:
                     print("I don't have the slightlest idea what this funny pieces and dashboard are")
