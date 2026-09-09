@@ -1,7 +1,7 @@
 from inventory import add_item, remove_item, has_item
 import Status
 import Cauldron
-import Fishing
+import fishing
 import Heroes
 
 aileen = "Aileen"
@@ -28,8 +28,8 @@ def goblin_warehouse_second_part():
 
             if answer == 1:
                 if is_pond_talk:
-                    import Fishing
-                    Fishing.catalog()
+                    import fishing
+                    fishing.catalog()
                 else:
                     print("The water moves like if a breeze was blowing, but there are no windows here")
 
