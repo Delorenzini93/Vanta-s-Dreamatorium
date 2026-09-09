@@ -51,7 +51,8 @@ def kitchen_activities():
 
     while True:
         print("1. Use the cauldron")
-        print("2. Leave the kitchen")
+        print("2. Ask Winky for food")
+        print("3. Leave the kitchen")
 
         try:
             answer = int(input("What do we do at the kitchen?"))
@@ -59,12 +60,21 @@ def kitchen_activities():
             if answer == 1:
                 Cauldron.cauldron()
             elif answer == 2:
+                if Status.player_hp == 100:
+                    print(f"{elf}: You look full sir, come back when you're hungry!")
+                else:
+                    Status.player_hp = 100
+                    print("Winky served you a delicious meal. HP fully restored!")
+            elif answer == 3:
                 print("You return to the Dining Room")
                 return
             else:
                 print("Do you use the cauldron or not?")
         except ValueError:
             print("Choose a valid option")
+
+
+
 #########################################
 def kitchen_scene():
     global is_rosmerta_happy
