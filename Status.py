@@ -1,6 +1,9 @@
 user = ""
 current_outfit = "Default outfit"
 
+player_level = 1
+player_exp = 0
+
 souls = 0
 
 player_hp = 100

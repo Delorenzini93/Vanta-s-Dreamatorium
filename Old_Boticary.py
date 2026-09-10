@@ -88,6 +88,7 @@ def old_boticary():
         print("\n1. Buy items")
         print("2. Sell items")
         print("3. Ask for recipes")
+        print("4. Inspect place")
         print("4. Leave")
 
         try:
@@ -117,6 +118,16 @@ def old_boticary():
                     boticary_recipe()
 
             elif answer == 4:
+                if is_stored_inspected:
+                    print("There's a shining light on the floor, far from the owner's eyes")
+                    add_item("Gasoline")
+                    print("You obtain GASOLINE!")
+                else:
+                    print("Seems like an improvised store of some sort with all kind of seemingly unrelated stuff")
+                    print("The more I look, the more things I discover, it's quite striking")
+                    is_store_inspected = True
+
+            elif answer == 5:
                 print("You leave the Old Boticary.")
                 return
 
