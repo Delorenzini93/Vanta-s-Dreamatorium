@@ -40,7 +40,6 @@ def far_central_wing():
                     print("You found CANDLES")
                     add_item('Candles')
                     is_far_chest_open = True
-                    print("I already opened this chest, there's nothing here")
                     continue
             elif answer == 2:
                 if is_hero_free:
@@ -153,7 +152,6 @@ def central_west_wing():
                     print("You found $5000!")
                     Status.souls += 5000
                     is_west_wing_chest_open = True
-                    print("I already opened this chest, there's nothing here")
                     continue
             elif answer == 4:
                 print("You step back from where you came")
@@ -183,7 +181,6 @@ def left_wing():
                     print("You found $5000!")
                     Status.souls += 5000
                     is_left_wing_chest_open = True
-                    print("I already opened this chest, there's nothing here")
                     continue
             elif answer == 2:
                 print("There's a huge mirror preventing further move")
@@ -259,7 +256,6 @@ def west_wing():
                         print("You found $5000!")
                         Status.souls += 5000
                         is_flick_chest_open = True
-                        print("I already opened this chest, there's nothing here")
                         continue
                 print("There's a huge mirror preventing further move")
                 continue

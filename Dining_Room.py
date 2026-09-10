@@ -73,8 +73,6 @@ def kitchen_activities():
         except ValueError:
             print("Choose a valid option")
 
-
-
 #########################################
 def kitchen_scene():
     global is_rosmerta_happy

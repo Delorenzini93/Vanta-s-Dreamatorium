@@ -9,6 +9,8 @@ is_second_trapdoor_open = False
 is_third_trapdoor_open = False
 is_tunnel_chest_open = False
 is_minecart = False
+is_cauldron_clean = False
+is_cabinet_checked = False
 
 ###########################
 def tunnel_third_section():
@@ -38,7 +40,6 @@ def tunnel_third_section():
                     print("You found $5000!")
                     Status.souls += 5000
                     is_tunnel_chest_open = True
-                    print("I already opened this chest, there's nothing here")
                     continue
             elif answer == 3:
                 if is_minecart:
@@ -126,7 +127,7 @@ def cauldron_room_tunnel():
                             if answer == 1:
                                 is_torches_lit = True
                                 print("Now we're talking! I can see the whole tunnel now!")
-                                return
+                                break
                             elif answer == 2:
                                 print("Why am I doing this?")
                                 return
@@ -163,7 +164,7 @@ def trapdoor():
             print("Choose a valid action")
 #############################
 def room_of_cauldrons():
-    global is_room_checked
+    global is_room_checked, is_cauldron_clean, is_cabinet_checked
     print("There's a noisy, smelly and dim-lighted small circular room, unlike the others")
 
     while True:
@@ -180,9 +181,33 @@ def room_of_cauldrons():
                 print("The room's pretty small and not well lighted...it has a second floor and noise coming from above")
                 is_room_checked = True
             elif answer == 2:
-                print("The cauldron at the center of the room is still hot...maybe someone used it not long ago?")
+                if is_cauldron_clean and has_item('Rusty Eagle Key'):
+                    print("It looks amazing and smells so good I bet that key could be cleaned here")
+                    print("Efectivelly, the RUSTY EAGLE KEY is now clean and devoid of rust!")
+                    remove_item('Rusty Eagle Key')
+                    add_item('Eagle Key')
+                    print("'Eagle Key' obtained!")
+                elif is_cauldron_clean:
+                    print("Smells so nice...I bet almost anything could be cleansed here")
+                elif has_item('Ghoul Eye'):
+                    print("Hey! I heard that GHOUL EYE can completelly clean cauldrons or wounds")
+                    print("You use 'Ghoul Eye' to clean and cold up the cauldron")
+                    remove_item('Ghoul Eye')
+                    is_cauldron_clean = True
+                    print("The center cauldron is now cleand and cold with a blueish halo")
+                else:
+                    print("The cauldron at the center of the room is warm with boiling rust...maybe someone used it not long ago?")
             elif answer == 3:
-                print("It's closed")
+                if is_cabinet_checked:
+                    print("Nothing of interest here")
+                elif has_item('Cabinet Key'):
+                    print("The cabinet opens and there's a shining thing among the unorganized materials")
+                    remove_item('Cabinet Key')
+                    add_item('Rusty Eagle Key')
+                    print("'Rusty Eagle Key' obtained!")
+                    is_cabinet_checked = True
+                else:
+                    print("It's closed")
             elif answer == 4:
                 if is_room_checked:
                     print("The room pretty filled with all kind of things, looks very messy")
