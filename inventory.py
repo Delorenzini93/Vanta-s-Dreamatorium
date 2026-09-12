@@ -37,11 +37,3 @@ item_descriptions = {
     "Potion": "Restores 30 HP.",
     "Amine": "Temporarily increases evasion.",
 }
-
-inventory = {
-    "usable": [],
-    "equipment": [],
-    "key_items": [],
-    "collectibles": [],
-    "misc": []
-}

@@ -2,7 +2,7 @@ import random
 import Status
 from inventory import show_inventory, has_item, remove_item, battle_items
 
-def battle(enemy_name, enemy_hp, enemy_attack):
+def battle(enemy_name, enemy_hp, enemy_attack, enemy_souls=0, enemy_exp=0):
     player_hp = Status.player_hp
 
     attacks = {
@@ -42,14 +42,14 @@ def battle(enemy_name, enemy_hp, enemy_attack):
                     remove_item(item_name)
 
                     if item["type"] == "heal":
-                        player_hp = min(100, player_hp + item["value"])
+                        player_hp = min(Status.player_max_hp, player_hp + item["value"])
                         print(f"You used {item_name}! Restored {item['value']} HP. Current HP: {player_hp}")
 
                     elif item["type"] == "speed":
                         Status.player_speed += item["value"]
                         print(f"You used {item_name}! Evasion increased for {item['duration']} turns.")
 
-                    continue  # usa item sin gastar turno
+                    continue
 
                 if choice not in attacks:
                     print("Choose between 1 and 4.")
@@ -82,4 +82,8 @@ def battle(enemy_name, enemy_hp, enemy_attack):
         return False
     else:
         print(f"\n{enemy_name} was defeated!")
+        Status.player_hp = player_hp
+        Status.souls += enemy_souls
+        Status.player_exp += enemy_exp
+        Status.check_levelup()
         return True
