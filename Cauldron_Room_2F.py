@@ -75,7 +75,7 @@ def cauldron_room_2F():
                 answer = int(input("Let's see..."))
 
                 if answer == 1:
-                    print("")
+                    print("Just a pile of broken things, nothing useful here.")
                 elif answer == 2:
                     if is_second_floor_door_open:
                         import Second_Upper_Hall
@@ -93,5 +93,6 @@ def cauldron_room_2F():
                 print("Choose a valid action")
     else:
         fairy_interaction()
+        is_fairy_appear = True
 #################
 cauldron_room_2F()
