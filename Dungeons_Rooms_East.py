@@ -1,0 +1,85 @@
+from inventory import add_item, remove_item, has_item
+import Status
+
+def dungeons_corridor_last():
+    print("-I....need....breathing...a bit")
+
+    while True:
+
+        print("1. Open the Oak door")
+        print("2. Go back to the corridor")
+
+        try:
+            answer = int(input(""))
+
+            if answer == 1:
+                print("You open and pass through the Oak Door")
+                import Hall_Of_Trophies
+                Hall_Of_Trophies.hall_of_trophies()
+                return
+            elif answer == 2:
+                print("You hear loud angry voices as you run...")
+                dungeons_corridor_last()
+        except ValueError:
+            print("Choose a valid action")
+
+
+############################
+def dungeons_corridor_closer():
+    print("-It's difficult to breath in here...")
+
+    while True:
+        print("1. Run through the corridor")
+        print("2. Go back")
+
+        try:
+            answer = int(input(""))
+
+            if answer == 1:
+                print("You hear loud angry voices as you run...")
+                dungeons_corridor_last()
+            elif answer == 2:
+                print("You hear distant echoes as you run...")
+                dungeons_east()
+        except ValueError:
+            print("Choose a valid action")
+############################
+def dungeons_corridor_far():
+    print("-I need to catch my breath...")
+
+    while True:
+        print("1. Run through the corridor")
+        print("2. Go back")
+
+        try:
+            answer = int(input(""))
+
+            if answer == 1:
+                print("You hear distant echoes as you run...")
+                dungeons_corridor_closer()
+            elif answer == 2:
+                print("You hear indistinct chatter as you run...")
+                dungeons_east()
+        except ValueError:
+            print("Choose a valid action")
+#######################
+def dungeons_east():
+    print("There's a long corridor with a door at the end of it")
+
+    while True:
+        print("1. Run through the corridor")
+        print("2. Go back")
+
+        try:
+            answer = int(input("Well..."))
+
+            if answer == 1:
+                print("You hear indistinct chatter as you run...")
+                dungeons_corridor_far()
+            elif answer == 2:
+                print("You went back to the dungeons")
+                return
+        except ValueError:
+            print("Choose a valid action")
+################
+dungeons_east()
