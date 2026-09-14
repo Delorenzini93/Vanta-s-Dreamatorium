@@ -1,5 +1,6 @@
 from inventory import add_item, remove_item, has_item
 import Status
+import Encounters
 
 def dungeons_corridor_last():
     print("-I....need....breathing...a bit")
@@ -18,6 +19,7 @@ def dungeons_corridor_last():
                 Hall_Of_Trophies.hall_of_trophies()
                 return
             elif answer == 2:
+                Encounters.random_encounter("dungeons")
                 print("You hear loud angry voices as you run...")
                 dungeons_corridor_last()
         except ValueError:
@@ -36,9 +38,11 @@ def dungeons_corridor_closer():
             answer = int(input(""))
 
             if answer == 1:
+                Encounters.random_encounter("dungeons")
                 print("You hear loud angry voices as you run...")
                 dungeons_corridor_last()
             elif answer == 2:
+                Encounters.random_encounter("dungeons")
                 print("You hear distant echoes as you run...")
                 dungeons_east()
         except ValueError:
@@ -55,9 +59,11 @@ def dungeons_corridor_far():
             answer = int(input(""))
 
             if answer == 1:
+                Encounters.random_encounter("dungeons")
                 print("You hear distant echoes as you run...")
                 dungeons_corridor_closer()
             elif answer == 2:
+                Encounters.random_encounter("dungeons")
                 print("You hear indistinct chatter as you run...")
                 dungeons_east()
         except ValueError:
@@ -74,6 +80,7 @@ def dungeons_east():
             answer = int(input("Well..."))
 
             if answer == 1:
+                Encounters.random_encounter("dungeons")
                 print("You hear indistinct chatter as you run...")
                 dungeons_corridor_far()
             elif answer == 2:

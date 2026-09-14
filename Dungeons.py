@@ -1,6 +1,6 @@
 from inventory import add_item, remove_item, has_item
 import Status
-import encounters
+import Encounters
 
 ######################
 def dungeons_east():
@@ -21,7 +21,7 @@ def dungeons_east():
                 import Dungeons_Rooms_East
                 Dungeons_Rooms_East.upside_down_room()
             elif answer == 3:
-                encounters.random_encounter("dungeons")
+                Encounters.random_encounter("dungeons")
                 print("You go back at the beginning of the dungeons")
                 dungeons()
         except ValueError:
@@ -45,7 +45,7 @@ def dungeons_west():
                 import Dungeons_Rooms_West
                 Dungeons_Rooms_West.forgotten_room()
             elif answer == 3:
-                encounters.random_encounter("dungeons")
+                Encounters.random_encounter("dungeons")
                 print("You go back at the beginning of the dungeons")
                 dungeons()
         except ValueError:
@@ -69,7 +69,7 @@ def dungeons_forward():
                 import Dungeons_Rooms
                 Dungeons_Rooms.noisy_room()
             elif answer == 3:
-                encounters.random_encounter("dungeons")
+                Encounters.random_encounter("dungeons")
                 print("You go back at the beginning of the dungeons")
                 dungeons()
         except ValueError:
@@ -88,15 +88,15 @@ def dungeons():
             answer = int(input("Better get going..."))
 
             if answer == 1:
-                encounters.random_encounter("dungeons")
+                Encounters.random_encounter("dungeons")
                 print("You move forward in the darkness")
                 dungeons_forward()
             elif answer == 2:
-                encounters.random_encounter("dungeons")
+                Encounters.random_encounter("dungeons")
                 print("You move closer to the walls")
                 dungeons_west()
             elif answer == 3:
-                encounters.random_encounter("dungeons")
+                Encounters.random_encounter("dungeons")
                 print("You move closer to the windows")
                 dungeons_east()
             elif answer == 4:
