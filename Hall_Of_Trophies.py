@@ -1,7 +1,8 @@
+from Upside_Down_Room import come_from_trophies_room
 from inventory import add_item, remove_item, has_item
 import Status
 import Room_Of_Cauldrons
-import Dungeons_Rooms_East
+import Upside_Down_Room
 
 
 
@@ -11,14 +12,15 @@ is_fairy_book_open = False
 is_tunnel_lit = False
 
 def trophy_battle():
+    pass
 ########################################
 def trophy_office():
     global is_fairy_book_open
     print("It's a very old room crowded with papers everywhere.Seems like if someone was searching for something in a rush")
 
     while True:
-        print("1.")
-        print("2.")
+        print("1. Inspect the office's desk")
+        print("2. Go back to the Trophies Room")
 
         try:
             answer = int(input("This place is an absolute mess..."))
@@ -62,7 +64,9 @@ def hall_of_trophies_back_of_the_room():
             if answer == 1:
                 if is_champion_down:
                     print("The door leading to the Upside Down Room is now open...")
-                    Dungeons_Rooms_East.upside_down_room()
+                    import Upside_Down_Room
+                    Upside_Down_Room.come_from_trophies_room = True
+                    Upside_Down_Room.upside_down_room4()
                 else:
                     print("A special kind of magic is binding the door preventing access")
                     return
@@ -71,12 +75,12 @@ def hall_of_trophies_back_of_the_room():
                 trophy_office()
             elif answer == 3:
                 if has_item('Fusibles'):
-                    print("The mechanism is now working and the tunnel is now fully iluminated")
+                    print("The mechanism is now working and the tunnel is now fully illuminated")
                     remove_item('Fusibles')
                     is_tunnel_lit = True
                     return
                 elif is_tunnel_lit:
-                    print("The mechanism is now working and the tunnel is now fully iluminated")
+                    print("The mechanism is now working and the tunnel is now fully illuminated")
                 else:
                     print("Seems like and old mechanism that activates the lever")
                     print("The mechanism seems to be blown out, maybe I should watch out for FUSIBLES")

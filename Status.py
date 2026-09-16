@@ -28,7 +28,8 @@ enemy_defeated = {
     "Glass Entity": False,
     "Shadows": False,
     "Galerian": False,
-    "Foul Ghoul": False
+    "Foul Ghoul": False,
+    "Champion": False
 }
 
 def assign_stat_points():
