@@ -29,7 +29,9 @@ enemy_defeated = {
     "Shadows": False,
     "Galerian": False,
     "Foul Ghoul": False,
-    "Champion": False
+    "Champion": False,
+    "Reanimated Knight L": False,
+    "Reanimated Knight R": False
 }
 
 def assign_stat_points():

@@ -1,7 +1,7 @@
 from inventory import add_item, remove_item, has_item
 import Status
 import Heroes
-
+import battle
 
 cuc = 'Cuchulain'
 
@@ -15,9 +15,44 @@ is_circular_mirror_flicked = False
 is_flick_chest_open = False
 
 def left_wing_knight_battle():
-    pass
+    global is_left_wing_knight_down
+    if not Status.enemy_defeated["Reanimated Knight L"]:
+
+        result = battle.battle(
+            enemy_name="Reanimated Knight L",
+            enemy_hp=350,
+            enemy_attack=20
+        )
+
+        if result:
+            Status.enemy_defeated["Reanimated Knight L"] = True
+            add_item('Potion')
+            add_item('Potion')
+            is_left_wing_knight_down = True
+            return
+        else:
+            print("GAME OVER")
+            return
+######################################
 def west_wing_knight_battle():
-    pass
+    global is_west_wing_knight_down
+    if not Status.enemy_defeated["Reanimated Knight R"]:
+
+        result = battle.battle(
+            enemy_name="Reanimated Knight R",
+            enemy_hp=350,
+            enemy_attack=20
+        )
+
+        if result:
+            Status.enemy_defeated["Reanimated Knight R"] = True
+            add_item('Potion')
+            add_item('Potion')
+            is_west_wing_knight_down = True
+            return
+        else:
+            print("GAME OVER")
+            return
 ######################################
 def far_central_wing():
     global is_far_chest_open, is_hero_free
@@ -49,9 +84,9 @@ def far_central_wing():
                     print("There's a mirror whose reflection doesn't match yours.....wait a sec..")
                     print("???: WHOOOOA I SEEMS SOOOOOOO LONG AGO!")
                     print("???:Now I'm free to eat as many food as I want!")
-                    print(f"???: By the way I'm {cuc}, Hero Of Glutony hehehe")
+                    print(f"???: By the way I'm {cuc}, Hero Of Gluttony hehehe")
                     print(f"{cuc}I guess Madam Rosmerta is not gonna be glad to see me again hehehe")
-                    print(f"{cuc}: Either way, thanx for freein' me, boy!")
+                    print(f"{cuc}: Either way, thanx for freeing me, boy!")
                     Heroes.find_hero(f"{cuc}")
                     is_hero_free = True
                     continue
@@ -112,7 +147,6 @@ def central_left_wing():
                 else:
                     print("You move forward and discover an old statue of a knight...the knight moves!")
                     left_wing_knight_battle()
-                    pass
             elif answer == 3:
                 print("There's a huge mirror preventing further move")
                 continue
@@ -177,7 +211,7 @@ def left_wing():
                     print("I already opened this chest, there's nothing here")
                     continue
                 else:
-                    print("You founnd a chest!")
+                    print("You found a chest!")
                     print("You found $5000!")
                     Status.souls += 5000
                     is_left_wing_chest_open = True
@@ -241,7 +275,6 @@ def west_wing():
                 else:
                     print("You move forward and discover an old statue of a knight...the knight moves!")
                     west_wing_knight_battle()
-                    pass
             #######
             elif answer == 2:
                 print("You now move to your left, more flickering lights from the mirrors echoes your move")
@@ -252,7 +285,7 @@ def west_wing():
                         print("I already opened this chest, there's nothing here")
                         continue
                     else:
-                        print("You founnd a chest!")
+                        print("You found a chest!")
                         print("You found $5000!")
                         Status.souls += 5000
                         is_flick_chest_open = True
