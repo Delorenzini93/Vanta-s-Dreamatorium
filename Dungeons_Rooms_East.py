@@ -45,7 +45,7 @@ def dungeons_corridor_closer():
             elif answer == 2:
                 Encounters.random_encounter("dungeons")
                 print("You hear distant echoes as you run...")
-                dungeons_east()
+                dungeons_corridor_init()
                 return
         except ValueError:
             print("Choose a valid action")
@@ -68,12 +68,12 @@ def dungeons_corridor_far():
             elif answer == 2:
                 Encounters.random_encounter("dungeons")
                 print("You hear indistinct chatter as you run...")
-                dungeons_east()
+                dungeons_corridor_init()
                 return
         except ValueError:
             print("Choose a valid action")
 #######################
-def dungeons_east():
+def dungeons_corridor_init():
     print("There's a long corridor with a door at the end of it")
 
     while True:
@@ -94,4 +94,4 @@ def dungeons_east():
         except ValueError:
             print("Choose a valid action")
 ################
-dungeons_east()
+dungeons_corridor_init()

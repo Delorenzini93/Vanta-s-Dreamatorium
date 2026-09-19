@@ -15,11 +15,11 @@ def dungeons_east():
             if answer == 1:
                 print("You open the door that lies to your right")
                 import Dungeons_Rooms_East
-                Dungeons_Rooms_East.spacious_room()
+                Dungeons_Rooms_East.dungeons_corridor_init()
             elif answer == 2:
                 print("You open the door that lies to your left")
-                import Dungeons_Rooms_East
-                Dungeons_Rooms_East.upside_down_room()
+                import Upside_Down_Room
+                Upside_Down_Room.where_to_start()
             elif answer == 3:
                 Encounters.random_encounter("dungeons")
                 print("You go back at the beginning of the dungeons")
