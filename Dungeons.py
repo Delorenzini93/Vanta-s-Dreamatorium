@@ -46,7 +46,7 @@ def dungeons_west():
             elif answer == 2:
                 print("You open the door that lies to your left")
                 import Dungeons_Room_Trial
-                Dungeons_Room_Trial.dungeon_room_trial()
+                Dungeons_Room_Trial.dungeons_room_trial()
             elif answer == 3:
                 Encounters.random_encounter("dungeons")
                 print("You go back at the beginning of the dungeons")
