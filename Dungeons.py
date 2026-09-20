@@ -37,13 +37,16 @@ def dungeons_west():
             answer = int(input("We moved west, where do we go now?"))
 
             if answer == 1:
-                print("You open the door that lies to your right")
-                import Dungeons_Rooms_West
-                Dungeons_Rooms_West.secret_room()
+                if not Status.is_daylight:
+                    print("You open the door that lies to your right")
+                    import Dungeons_Secret_Room
+                    Dungeons_Secret_Room.dungeons_secret_room()
+                else:
+                    print("A powerful magic prevents the door from opening")
             elif answer == 2:
                 print("You open the door that lies to your left")
-                import Dungeons_Rooms_West
-                Dungeons_Rooms_West.forgotten_room()
+                import Dungeons_Room_Trial
+                Dungeons_Room_Trial.dungeon_room_trial()
             elif answer == 3:
                 Encounters.random_encounter("dungeons")
                 print("You go back at the beginning of the dungeons")
@@ -62,12 +65,12 @@ def dungeons_forward():
 
             if answer == 1:
                 print("You open the door that lies to your right")
-                import Dungeons_Rooms
-                Dungeons_Rooms.troll_room()
+                import Dungeons_Tunnel
+                Dungeons_Tunnel.dungeons_tunnel()
             elif answer == 2:
                 print("You open the door that lies to your left")
-                import Dungeons_Rooms
-                Dungeons_Rooms.noisy_room()
+                import Dungeons_Noisy_Room
+                Dungeons_Noisy_Room.dungeons_noisy_room()
             elif answer == 3:
                 Encounters.random_encounter("dungeons")
                 print("You go back at the beginning of the dungeons")
@@ -79,9 +82,9 @@ def dungeons():
     print("I can barely see a metre away...better be careful around here...")
 
     while True:
-        print("1. Move forward")
-        print("2. Move left")
-        print("3. Move right")
+        print("1. Move north")
+        print("2. Move east")
+        print("3. Move west")
         print("4. Go back")
         print("5. Check inventory")
 
