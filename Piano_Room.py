@@ -9,6 +9,7 @@ def piano_room():
         print("\n1. Read 'The Night That Never Ended.")
         print("2. Play the piano.")
         print("3. Leave the room")
+        print("4. Check inventory")
 
         try:
             answer = int(input("\nWhat should we do here? "))
@@ -28,6 +29,9 @@ def piano_room():
             elif answer == 3:
                 print("\nYou leave the Piano room.")
                 return
+            elif answer == 4:
+                from inventory import show_inventory
+                show_inventory()
 
             else:
                 print("Please choose a number between 1 and 3.")

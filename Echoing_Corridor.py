@@ -21,6 +21,7 @@ def echoing_puzzle():
         print("4. Speak with furthest prisoner")
         print("5. Touch the torch's flame")
         print("6. Leave the corridor")
+        print("7. Check inventory")
 
         try:
             answer = int(input("\nWhat should I say? "))
@@ -74,6 +75,9 @@ def echoing_puzzle():
             elif answer == 6:
                 print("\nYou step away from the echoing corridor for now.")
                 return
+            elif answer == 7:
+                from inventory import show_inventory
+                show_inventory()
 
             else:
                 print("Please choose a number between 1 and 5.")

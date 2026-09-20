@@ -115,6 +115,7 @@ def dining_room():
         print("3. Inspect the painting")
         print("4. Inspect the noisy door (right)")
         print("5. Leave")
+        print("6. Check inventory")
 
         try:
             answer = int(input("What do we do?"))
@@ -173,6 +174,9 @@ def dining_room():
             elif answer == 5:
                 print("You go back to the Second Hall")
                 return
+            elif answer == 6:
+                from inventory import show_inventory
+                show_inventory()
         except ValueError:
             print("Choose a valid option")
 #####################

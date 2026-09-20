@@ -8,6 +8,7 @@ def marble_door_night():
         print("1. Inspect the Marble door")
         print("2. Inspect the glass walls (left)")
         print("3. Go back through the corridor")
+        print("4. Check inventory")
 
         try:
             answer = int(input(""))
@@ -33,6 +34,9 @@ def marble_door_night():
                 Encounters.random_encounter("dungeons")
                 print("You run through the other side of the corridor")
                 return
+            elif answer == 4:
+                from inventory import show_inventory
+                show_inventory()
         except ValueError:
             print("Choose a valid action")
 #######################
@@ -42,6 +46,7 @@ def marble_door_day():
         print("1. Inspect the Marble door")
         print("2. Inspect the glass walls (left)")
         print("3. Go back through the corridor")
+        print("4. Check inventory")
 
         try:
             answer = int(input(""))
@@ -55,6 +60,9 @@ def marble_door_day():
             elif answer == 3:
                 print("You run through the other side of the corridor")
                 return
+            elif answer == 4:
+                from inventory import show_inventory
+                show_inventory()
         except ValueError:
             print("Choose a valid action")
 ############################
@@ -65,6 +73,7 @@ def windy_corridor_night():
         print("1. Run through the corridor (forward)")
         print("2. Inspect the glass walls (left)")
         print("3. Go back")
+        print("4. Check inventory")
 
         try:
             answer = int(input(""))
@@ -78,6 +87,9 @@ def windy_corridor_night():
             elif answer == 3:
                 print("You return to the Second Hall")
                 return
+            elif answer == 4:
+                from inventory import show_inventory
+                show_inventory()
         except ValueError:
             print("Choose a valid action")
 ###########################
@@ -88,6 +100,7 @@ def windy_corridor_day():
         print("1. Run through the corridor (forward)")
         print("2. Inspect the glass walls (left)")
         print("3. Go back")
+        print("4. Check inventory")
 
         try:
             answer = int(input(""))
@@ -100,6 +113,9 @@ def windy_corridor_day():
             elif answer == 3:
                 print("You return to the Second Hall")
                 return
+            elif answer == 4:
+                from inventory import show_inventory
+                show_inventory()
         except ValueError:
             print("Choose a valid action")
 #############################

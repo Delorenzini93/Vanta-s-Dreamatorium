@@ -202,6 +202,7 @@ def flooded_library():
         print("3. Examine the pile of books (right)")
         print("4. Examine the pile of books (left)")
         print("5. Exit the library")
+        print("6. Check inventory")
 
         try:
             answer = int(input("Choose an action: "))
@@ -222,6 +223,9 @@ def flooded_library():
                     is_look_bookpile_left = True
             elif answer == 5:
                 return
+            elif answer == 6:
+                from inventory import show_inventory
+                show_inventory()
             else:
                 print("Choose an option from 1 to 5.")
         except ValueError:

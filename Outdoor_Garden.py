@@ -16,6 +16,7 @@ def outdoor_garden():
         print("\n1. Take a look at the garden")
         print("2, Inspect the Shed's door")
         print("3. Return")
+        print("4. Check inventory")
 
         try:
             answer = int(input("action: "))
@@ -45,6 +46,9 @@ def outdoor_garden():
             elif answer == 3:
                 print("You re-enter the castle")
                 return
+            elif answer == 4:
+                from inventory import show_inventory
+                show_inventory()
 
             else:
                 print("Choose either the farm or the shed's door")

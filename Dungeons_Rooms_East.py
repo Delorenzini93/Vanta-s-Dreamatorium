@@ -10,6 +10,7 @@ def dungeons_corridor_last():
 
         print("\n1. Open the Oak door")
         print("2. Go back to the corridor")
+        print("3. Check inventory")
 
         try:
             answer = int(input(""))
@@ -23,6 +24,9 @@ def dungeons_corridor_last():
                 print("You hear loud angry voices as you run...")
                 dungeons_corridor_closer()
                 return
+            elif answer == 3:
+                from inventory import show_inventory
+                show_inventory()
         except ValueError:
             print("Choose a valid action")
 
@@ -33,6 +37,7 @@ def dungeons_corridor_closer():
     while True:
         print("\n1. Run through the corridor")
         print("2. Go back")
+        print("3. Check inventory")
 
         try:
             answer = int(input(""))
@@ -47,6 +52,9 @@ def dungeons_corridor_closer():
                 print("You hear distant echoes as you run...")
                 dungeons_corridor_init()
                 return
+            elif answer == 3:
+                from inventory import show_inventory
+                show_inventory()
         except ValueError:
             print("Choose a valid action")
 ############################
@@ -56,6 +64,7 @@ def dungeons_corridor_far():
     while True:
         print("\n1. Run through the corridor")
         print("2. Go back")
+        print("3. Check inventory")
 
         try:
             answer = int(input(""))
@@ -70,6 +79,9 @@ def dungeons_corridor_far():
                 print("You hear indistinct chatter as you run...")
                 dungeons_corridor_init()
                 return
+            elif answer == 3:
+                from inventory import show_inventory
+                show_inventory()
         except ValueError:
             print("Choose a valid action")
 #######################
@@ -79,6 +91,7 @@ def dungeons_corridor_init():
     while True:
         print("\n1. Run through the corridor")
         print("2. Go back")
+        print("3. Check inventory")
 
         try:
             answer = int(input("Well..."))
@@ -91,6 +104,9 @@ def dungeons_corridor_init():
             elif answer == 2:
                 print("You went back to the dungeons")
                 return
+            elif answer == 3:
+                from inventory import show_inventory
+                show_inventory()
         except ValueError:
             print("Choose a valid action")
 ################

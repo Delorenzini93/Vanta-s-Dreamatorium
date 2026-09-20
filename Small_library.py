@@ -19,6 +19,7 @@ def reading_of_books():
         print("3. Book of Time")
         print("4. Book of Wisdom")
         print("5. Leave the books for now")
+        print("6. Check inventory")
 
         try:
             answer = int(input("\nWhich book should you take a look at? "))
@@ -38,6 +39,9 @@ def reading_of_books():
             elif answer == 5:
                 print("\nYou step away from the shelves for now.")
                 return
+            elif answer == 6:
+                from inventory import show_inventory
+                show_inventory()
             else:
                 print("Please choose a number between 1 and 5.")
                 continue

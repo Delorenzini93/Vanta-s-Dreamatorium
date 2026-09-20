@@ -83,6 +83,7 @@ def dungeons():
         print("2. Move left")
         print("3. Move right")
         print("4. Go back")
+        print("5. Check inventory")
 
         try:
             answer = int(input("Better get going..."))
@@ -102,6 +103,9 @@ def dungeons():
             elif answer == 4:
                 print("You leave the dungeons")
                 return
+            elif answer == 5:
+                from inventory import show_inventory
+                show_inventory()
         except ValueError:
             print("Choose a valid action")
 #############################

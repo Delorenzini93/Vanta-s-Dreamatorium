@@ -25,6 +25,7 @@ def goblin_warehouse_second_part():
         print("2. Check the weird-looking chess game")
         print("3. Check the pile of dusty books")
         print("4. Go back at the beginning of the warehouse")
+        print("5. Check inventory")
 
         try:
             answer = int(input("What do we do here?"))
@@ -58,6 +59,9 @@ def goblin_warehouse_second_part():
             elif answer == 4:
                 print("You go back to the beginning of the warehouse")
                 return
+            elif answer == 5:
+                from inventory import show_inventory
+                show_inventory()
         except ValueError:
             print("Choose a valid option")
 
@@ -111,6 +115,7 @@ def goblin_warehouse():
         print("1. Check the chest")
         print("2. Explore the place a bit")
         print("3. Leave")
+        print("4. Check inventory")
 
         try:
             answer = int(input("So, what do we do in this strange place?"))
@@ -128,6 +133,9 @@ def goblin_warehouse():
             elif answer == 3:
                 print("You leave the warehouse and head back to the Dungeon's Corridor")
                 return
+            elif answer == 4:
+                from inventory import show_inventory
+                show_inventory()
         except ValueError:
             print("Please enter a valid action")
 ##################################################

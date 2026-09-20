@@ -11,6 +11,7 @@ def dungeons_corridor():
         print("4. Open furthest door (right)")
         print("5. Go down to the Dungeons.")
         print("6. Go back and leave the corridor")
+        print("7. Check inventory")
 
         try:
             answer = int(input("Where do we go from here?"))
@@ -50,6 +51,9 @@ def dungeons_corridor():
             elif answer == 6:
                 print("You leave the Dungeons Corridor for now")
                 return
+            elif answer == 7:
+                from inventory import show_inventory
+                show_inventory()
 
         except ValueError:
             print("Choose a valid action")

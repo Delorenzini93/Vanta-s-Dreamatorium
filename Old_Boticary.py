@@ -89,7 +89,8 @@ def old_boticary():
         print("2. Sell items")
         print("3. Ask for recipes")
         print("4. Inspect place")
-        print("4. Leave")
+        print("5. Leave")
+        print("6. Check inventory")
 
         try:
             answer = int(input("What do you need, wanderer? "))
@@ -130,6 +131,9 @@ def old_boticary():
             elif answer == 5:
                 print("You leave the Old Boticary.")
                 return
+            elif answer == 6:
+                from inventory import show_inventory
+                show_inventory()
 
             else:
                 print("Choose between 1 and 3.")

@@ -32,6 +32,7 @@ def upside_down_room1():
         print("1. Move forward")
         print("2. Move either side")
         print("3. Move backwards")
+        print("4. Check inventory")
 
         try:
             answer = int(input("Where do we go?"))
@@ -62,6 +63,9 @@ def upside_down_room1():
             elif answer == 3:
                 print("You go back to the dungeons")
                 return
+            elif answer == 4:
+                from inventory import show_inventory
+                show_inventory()
         except ValueError:
             print("Choose a valid action")
 #######################################
@@ -73,6 +77,7 @@ def upside_down_room2():
         print("1. Move forward")
         print("2. Move either side")
         print("3. Move backwards")
+        print("4. Check inventory")
 
         try:
             answer = int(input("Where do we go?"))
@@ -103,6 +108,9 @@ def upside_down_room2():
             elif answer == 3:
                 print("You go back to first section of the room")
                 return
+            elif answer == 4:
+                from inventory import show_inventory
+                show_inventory()
         except ValueError:
             print("Choose a valid action")
 #######################################
@@ -114,6 +122,7 @@ def upside_down_room3():
         print("1. Touch the Family Crest")
         print("2. Move either side")
         print("3. Move backwards")
+        print("4. Check inventory")
 
         try:
             answer = int(input("Where do we go?"))
@@ -153,6 +162,9 @@ def upside_down_room3():
             elif answer == 3:
                 print("You go back to middle section of the room")
                 return
+            elif answer == 4:
+                from inventory import show_inventory
+                show_inventory()
         except ValueError:
             print("Choose a valid action")
 #######################################
@@ -164,6 +176,7 @@ def upside_down_room4():
         print("1. Move forward")
         print("2. Move either side (sword)")
         print("3. Enter the Trophies Room")
+        print("4. Check inventory")
 
         try:
             answer = int(input("Evom ew od erehw?"))
@@ -188,6 +201,9 @@ def upside_down_room4():
             elif answer == 3:
                 print("You head to the Trophies Room")
                 return
+            elif answer == 4:
+                from inventory import show_inventory
+                show_inventory()
         except ValueError:
             print("Choose a valid action")
 ########################

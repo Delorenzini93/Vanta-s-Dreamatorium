@@ -8,6 +8,7 @@ def balcony():
         print("\n1. Sit in the chair")
         print("2. Look at the table")
         print("3. Leave the balcony")
+        print("4. Check inventory")
 
         try:
             answer = int(input("\nWhat should we do? "))
@@ -51,6 +52,9 @@ def balcony():
             elif answer == 3:
                 print("\nYou leave the balcony.")
                 return
+            elif answer == 4:
+                from inventory import show_inventory
+                show_inventory()
 
             else:
                 print("Please choose a number between 1 and 3.")

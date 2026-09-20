@@ -22,6 +22,7 @@ def tunnel_third_section():
         print("2. Inspect the floor")
         print("3. Inspect the railway")
         print("4. Go back")
+        print("5. Check inventory")
 
         try:
             answer = int(input("What do we do here?"))
@@ -51,6 +52,9 @@ def tunnel_third_section():
             elif answer == 4:
                 print("You go back to the middle section of the tunnel")
                 tunnel_second_section()
+            elif answer == 5:
+                from inventory import show_inventory
+                show_inventory()
         except ValueError:
             print("Choose a valid action")
 ###########################
@@ -63,6 +67,7 @@ def tunnel_second_section():
         print("2. Use the trapdoor")
         print("3. Inspect the walls")
         print("4. Go back to the beginning of the tunnel")
+        print("5. Check inventory")
 
         try:
             answer = int(input("Where do we go from here?"))
@@ -85,6 +90,9 @@ def tunnel_second_section():
             elif answer == 4:
                 print("Let's return")
                 cauldron_room_tunnel()
+            elif answer == 5:
+                from inventory import show_inventory
+                show_inventory()
         except ValueError:
             print("Choose a valid option")
 #############################
@@ -97,6 +105,7 @@ def cauldron_room_tunnel():
         print("2. Move forward")
         print("3. Inspect walls")
         print("4. Go back through the trapdoor")
+        print("5. Check inventory")
 
         try:
             answer = int(input("This looks like a foul place, better move..."))
@@ -138,6 +147,9 @@ def cauldron_room_tunnel():
             elif answer == 4:
                 print("You climb the trapdoor and head to the Cauldron Room")
                 return
+            elif answer == 5:
+                from inventory import show_inventory
+                show_inventory()
         except ValueError:
             print("Choose a valid action")
 #############################
@@ -173,6 +185,7 @@ def room_of_cauldrons():
         print("3. Inspect the ingredient's cupboard")
         print("4. Inspect the back of the room")
         print("5. Leave to the Corridor")
+        print("6. Check inventory")
 
         try:
             answer = int(input("Well, what do we do?"))
@@ -218,6 +231,9 @@ def room_of_cauldrons():
             elif answer == 5:
                 print("You leave to the corridors")
                 return
+            elif answer == 6:
+                from inventory import show_inventory
+                show_inventory()
         except ValueError:
             print("Choose a valid action")
 #######################################

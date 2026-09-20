@@ -62,6 +62,7 @@ def far_central_wing():
         print("1. Move forward")
         print("2. Move to your right")
         print("3. Go back")
+        print("4. Check inventory")
 
         try:
             answer = int(input("Where do we go from here?"))
@@ -93,6 +94,9 @@ def far_central_wing():
             elif answer == 3:
                 print("You step back from where you came")
                 central_left_wing()
+            elif answer == 4:
+                from inventory import show_inventory
+                show_inventory()
         except ValueError:
             print("Choose a valid option")
 ##################################################
@@ -103,6 +107,7 @@ def far_left_wing():
         print("1. Move to your left")
         print("2. Move to your right")
         print("3. Go back")
+        print("4. Check inventory")
 
         try:
             answer = int(input("Where do we go from here?"))
@@ -116,6 +121,9 @@ def far_left_wing():
             elif answer == 3:
                 print("You step back from where you came")
                 central_left_wing()
+            elif answer == 4:
+                from inventory import show_inventory
+                show_inventory()
         except ValueError:
             print("Choose a valid option")
 ##################################################
@@ -128,6 +136,7 @@ def central_left_wing():
         print("2. Move to your left")
         print("3. Move to your right")
         print("4. Go back")
+        print("5. Check inventory")
 
         try:
             answer = int(input("Where do we go from here?"))
@@ -153,6 +162,9 @@ def central_left_wing():
             elif answer == 4:
                 print("You step back from where you came")
                 left_wing()
+            elif answer == 5:
+                from inventory import show_inventory
+                show_inventory()
         except ValueError:
             print("Choose a valid option")
 ##################################################
@@ -165,6 +177,7 @@ def central_west_wing():
         print("2. Move to your left")
         print("3. Move to your right")
         print("4. Go back")
+        print("5. Check inventory")
 
         try:
             answer = int(input("Where do we go from here?"))
@@ -190,6 +203,9 @@ def central_west_wing():
             elif answer == 4:
                 print("You step back from where you came")
                 west_wing()
+            elif answer == 5:
+                from inventory import show_inventory
+                show_inventory()
         except ValueError:
             print("Choose a valid option")
 ##################################################
@@ -202,6 +218,7 @@ def left_wing():
         print("2. Move to your left")
         print("3. Move to your right")
         print("4. Go back")
+        print("5. Check inventory")
 
         try:
             answer = int(input("Where do we go from here?"))
@@ -225,6 +242,9 @@ def left_wing():
             elif answer == 4:
                 print("You step back from where you came")
                 hall_of_mirrors()
+            elif answer == 5:
+                from inventory import show_inventory
+                show_inventory()
         except ValueError:
             print("Choose a valid option")
 #############################################
@@ -236,6 +256,7 @@ def central_wing():
         print("2. Move to your left")
         print("3. Move to your right")
         print("4. Go back")
+        print("5. Check inventory")
 
         try:
             answer = int(input("Where do we go from here?"))
@@ -252,6 +273,9 @@ def central_wing():
             elif answer == 4:
                 print("You step back from where you came")
                 hall_of_mirrors()
+            elif answer == 5:
+                from inventory import show_inventory
+                show_inventory()
         except ValueError:
             print("Choose a valid option")
 #############################################
@@ -264,6 +288,7 @@ def west_wing():
         print("2. Move to your left")
         print("3. Move to your right")
         print("4. Go back")
+        print("5. Check inventory")
 
         try:
             answer = int(input("Where do we move among these mirrors?"))
@@ -295,6 +320,9 @@ def west_wing():
             elif answer == 4:
                 print("You step back from where you came")
                 hall_of_mirrors()
+            elif answer == 5:
+                from inventory import show_inventory
+                show_inventory()
         except ValueError:
             print("Choose a valid option")
 #############################################
@@ -308,6 +336,7 @@ def hall_of_mirrors():
         print("2. Walk right")
         print("3. Walk left")
         print("4. Exit the room")
+        print("5. Check inventory")
 
         try:
             answer = int(input("Where should we go from here?"))
@@ -324,6 +353,9 @@ def hall_of_mirrors():
             elif answer == 4:
                 print("You leave the Hall Of Mirrors")
                 return
+            elif answer == 5:
+                from inventory import show_inventory
+                show_inventory()
         except ValueError:
             print("Choose a valid option")
 #################

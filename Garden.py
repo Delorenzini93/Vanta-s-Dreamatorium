@@ -11,6 +11,7 @@ def statues():
         print("3. Statue of Time")
         print("4. Statue of Wisdom")
         print("5. Leave the garden for now")
+        print("6. Check inventory")
 
         try:
             answer = int(input("\nWhich statue would you examine? "))
@@ -38,6 +39,9 @@ def statues():
             elif answer == 5:
                 print("\nYou step away from the garden for now.")
                 return
+            elif answer == 6:
+                from inventory import show_inventory
+                show_inventory()
 
             else:
                 print("Please choose a number between 1 and 5.")

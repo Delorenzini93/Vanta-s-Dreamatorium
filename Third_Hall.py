@@ -43,6 +43,7 @@ def third_hall_night():
         print("3. Go to the Wooden door (west)")
         print("4. Go to the Marble door (south)")
         print("5. Look above")
+        print("6. Check inventory")
 
         try:
             answer = int(input("Where do we go from here?"))
@@ -74,6 +75,9 @@ def third_hall_night():
                     print("The door is tightly shut")
             elif answer == 5:
                 print("There impossible to see what's on the ceiling, the room is too dark")
+            elif answer == 6:
+                from inventory import show_inventory
+                show_inventory()
         except ValueError:
             print("Choose a valid action")
 ########################
@@ -87,6 +91,7 @@ def third_hall_day():
         print("3. Go to the Wooden door (west)")
         print("4. Go to the Marble door (south)")
         print("5. Look above")
+        print("6. Check inventory")
 
         try:
             answer = int(input("Where do we go from here?"))
@@ -114,6 +119,9 @@ def third_hall_day():
                     print("The door is tightly shut")
             elif answer == 5:
                 print("There are beautiful birds painted all over the facade of the second floor")
+            elif answer == 6:
+                from inventory import show_inventory
+                show_inventory()
         except ValueError:
             print("Choose a valid action")
 ########################

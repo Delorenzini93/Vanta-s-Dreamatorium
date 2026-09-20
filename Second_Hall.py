@@ -94,6 +94,7 @@ def second_hall():
         print("5. Dungeon's Corridors (right)")
         print("6. Echoing Corridor (right)")
         print("7. Vanta's Chamber")
+        print("8. Check inventory")
 
         try:
             answer = int(input("Where should we go?"))
@@ -128,6 +129,9 @@ def second_hall():
 
             elif answer == 7:
                 vantas_door()
+            elif answer == 8:
+                from inventory import show_inventory
+                show_inventory()
 
             else:
                 print("Please choose a valid action.")

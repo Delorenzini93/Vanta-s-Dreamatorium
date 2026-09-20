@@ -79,6 +79,8 @@ def vantas_room():
         print("\n1. Inspect the diary")
         print("2. Inspect the wardrobe")
         print("3. Leave Vanta's Room")
+        print("4. Check inventory")
+
 
         try:
             answer = int(input("\naction: "))
@@ -90,6 +92,9 @@ def vantas_room():
             elif answer == 3:
                 print("Leaving Vanta's Room")
                 break
+            elif answer == 4:
+                from inventory import show_inventory
+                show_inventory()
             else:
                 print("Choose between 1 and 3.")
         except ValueError:

@@ -57,6 +57,7 @@ def hall_of_trophies_back_of_the_room():
         print("3. Examine mechanism (left)")
         print("4. Examine trapdoor (floor - left)")
         print("5. Go back at the display cases area")
+        print("6. Check inventory")
 
         try:
             answer = int(input(""))
@@ -94,6 +95,9 @@ def hall_of_trophies_back_of_the_room():
                 print("As you move through the room, hundreds of trophies shine proudly before your eyes")
                 hall_of_trophies()
                 return
+            elif answer == 6:
+                from inventory import show_inventory
+                show_inventory()
         except ValueError:
             print("Choose a valid action")
 ###############################
@@ -106,6 +110,7 @@ def hall_of_trophies():
         print("2. Examine trophies in the table at the center of the room")
         print("3. Examine display case")
         print("4. Go back from the Oak door")
+        print("5. Check inventory")
 
         try:
             answer = int(input("Everything is so clean and shiny here..."))
@@ -128,6 +133,9 @@ def hall_of_trophies():
             elif answer == 4:
                 print("You go back to the dungeon's corridor")
                 return
+            elif answer == 5:
+                from inventory import show_inventory
+                show_inventory()
         except ValueError:
             print("Choose a valid action")
 ########################

@@ -70,6 +70,7 @@ def cauldron_room_2F():
             print("2. Inspect the door (forward)")
             print("3. Inspect the door (right)")
             print("4. Go back to the tunnel")
+            print("5. Check inventory")
 
             try:
                 answer = int(input("Let's see..."))
@@ -89,6 +90,9 @@ def cauldron_room_2F():
                     print("You went back to the tunnel")
                     import Room_Of_Cauldrons
                     Room_Of_Cauldrons.tunnel_second_section()
+                elif answer == 5:
+                    from inventory import show_inventory
+                    show_inventory()
             except ValueError:
                 print("Choose a valid action")
     else:
