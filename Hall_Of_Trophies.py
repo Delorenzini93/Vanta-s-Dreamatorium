@@ -2,8 +2,7 @@ from Upside_Down_Room import come_from_trophies_room
 from inventory import add_item, remove_item, has_item
 import Status
 import Room_Of_Cauldrons
-import Upside_Down_Room
-
+import battle
 
 
 is_trophy_examined = False
@@ -12,7 +11,26 @@ is_fairy_book_open = False
 is_tunnel_lit = False
 
 def trophy_battle():
-    pass
+    global is_champion_down
+    if not Status.enemy_defeated["Champion"]:
+
+        result = battle.battle(
+            enemy_name="Champion",
+            enemy_hp=1500,
+            enemy_attack=35
+        )
+
+        if result:
+            Status.enemy_defeated["Champion"] = True
+            print("\nThe Knight vanishes and the magic binding the door fades.")
+            add_item('#')
+            add_item('#')
+            is_champion_down = True
+        else:
+            print("GAME OVER")
+            return
+    else:
+        hall_of_trophies()
 ########################################
 def trophy_office():
     global is_fairy_book_open
