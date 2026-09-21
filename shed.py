@@ -25,7 +25,7 @@ def shed_battle():
             Status.player_speed += 10
             Status.player_hp += 10
             print(f"Attack increased! ({Status.player_speed})")
-            print(f"Defense increased! ({Status.player_hp})")
+            print(f"HP increased! ({Status.player_hp})")
             print("You equipped Leather Boots and Quartz Ring!")
     else:
         print("\nThe remains of the training dummy lie on the ground.")
