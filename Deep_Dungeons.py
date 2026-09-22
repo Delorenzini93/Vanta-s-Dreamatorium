@@ -2,7 +2,6 @@ import Third_Hall
 from inventory import add_item, remove_item, has_item
 import Status
 import Encounters
-import Third_Hall
 
 is_jail_open = False
 
