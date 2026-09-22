@@ -65,8 +65,8 @@ def dungeons_forward():
 
             if answer == 1:
                 print("You open the door that lies to your right")
-                import Dungeons_Tunnel
-                Dungeons_Tunnel.dungeons_tunnel()
+                import Deep_Dungeons
+                Deep_Dungeons.deep_dungeons()
             elif answer == 2:
                 print("You open the door that lies to your left")
                 import Dungeons_Noisy_Room

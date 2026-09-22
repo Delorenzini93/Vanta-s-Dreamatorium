@@ -60,9 +60,9 @@ def third_hall_night():
             elif answer == 3:
                 Encounters.random_encounter("dungeons")
                 if Status.is_candles_lit:
-                    print("You go to the dungeons")
-                    import Dungeons
-                    Dungeons.dungeons()
+                    print("You go to the deep dungeons")
+                    import Deep_Dungeons
+                    Deep_Dungeons.deep_dungeons_east()
                 else:
                     print("It's too dark to venture inside")
             elif answer == 4:
@@ -106,8 +106,8 @@ def third_hall_day():
             elif answer == 3:
                 if Status.is_candles_lit:
                     print("You go to the dungeons")
-                    import Dungeons
-                    Dungeons.dungeons()
+                    import Deep_Dungeons
+                    Deep_Dungeons.deep_dungeons_east()
                 else:
                     print("It's too dark to venture inside")
             elif answer == 4:
