@@ -44,7 +44,6 @@ def deep_dungeons_east():
             if answer == 1:
                 if Third_Hall.is_dungeons_door_open:
                     print("You go to the Third Hall")
-                    import Third_Hall
                     Third_Hall.third_hall()
                 else:
                     print("The door is tightly shut.Seems like it can be opened from the other side")
