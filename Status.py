@@ -9,11 +9,13 @@ player_exp_to_next = 100
 player_max_hp = 100
 player_hp = 100
 player_attack = 20
+player_ranged_attack = 0
 player_defense = 0
 player_speed = 30
 stat_points = 0
 
 current_weapon = "Bare Hands"
+current_ranged_weapon = "No ranged weapon"
 current_chest_armor = "No Armor"
 current_boots = "No Boots"
 current_accesory = "No Accesory"

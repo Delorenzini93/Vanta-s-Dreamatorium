@@ -6,8 +6,8 @@ def battle(enemy_name, enemy_hp, enemy_attack, enemy_souls=0, enemy_exp=0):
     player_hp = Status.player_hp
 
     attacks = {
-        1: ("Strong Attack", 35),
-        2: ("Normal Attack", 20),
+        1: ("Strong Attack", Status.player_attack),
+        2: ("Ranged Attack", Status.player_ranged_attack),
         3: ("Special Attack", 0),
     }
 
@@ -19,7 +19,7 @@ def battle(enemy_name, enemy_hp, enemy_attack, enemy_souls=0, enemy_exp=0):
         if turn == "player":
             print(f"\nYour HP: {player_hp} | {enemy_name} HP: {enemy_hp}")
             print("1. Strong Attack")
-            print("2. Normal Attack")
+            print("2. Ranged Attack")
             print("3. Special Attack")
             print("4. Use Item")
 
@@ -57,7 +57,15 @@ def battle(enemy_name, enemy_hp, enemy_attack, enemy_souls=0, enemy_exp=0):
 
                 name, damage = attacks[choice]
 
-                if choice == 3:
+                if choice == 2:
+                    if Status.player_ranged_attack == 0:
+                        print("You don't have a ranged weapon equipped.")
+                        continue
+                    name, damage = attacks[2]
+                    enemy_hp -= damage
+                    print(f"\n{name}! {enemy_name} takes {damage} damage.")
+
+                elif choice == 3:
                     enemy_attack = int(enemy_attack * 0.5)
                     print(f"Special activated! {enemy_name}'s attack reduced!")
                 else:

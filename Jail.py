@@ -27,6 +27,10 @@ def jail():
                     add_item("Blue Key")
                     print("You obtained 'HANDGUN'!")
                     print("You obtained 'BLUE KEY'!")
+                    Status.current_ranged_weapon = "Handgun"
+                    Status.player_ranged_attack += 20
+                    print(f"Ranged Attack increased! ({Status.player_ranged_attack})")
+                    print("You equipped Handgun")
                     is_body_checked = True
                 else:
                     print("I better leave this poor soul alone.")
