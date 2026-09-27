@@ -3,6 +3,7 @@ import Status
 import Encounters
 
 def mountainside():
+    Status.current_room = "mountainside"
 
 
 

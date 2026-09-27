@@ -107,6 +107,7 @@ def aileen_talk():
 
 #####################################
 def goblin_warehouse():
+    Status.current_room = "dungeons_corridor"
     global is_chest_open
     print("There's and old warehouse, somehow seems like an abandoned attic")
     print("There's also a cloed chest with lot of noise inside, weird...")

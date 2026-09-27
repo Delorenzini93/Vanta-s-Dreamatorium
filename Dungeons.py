@@ -79,6 +79,7 @@ def dungeons_forward():
             print("Choose a valid option")
 ######################
 def dungeons():
+    Status.current_room = "deep dungeons"
     print("I can barely see a metre away...better be careful around here...")
 
     while True:

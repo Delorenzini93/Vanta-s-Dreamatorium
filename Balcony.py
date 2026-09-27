@@ -1,6 +1,8 @@
 from inventory import add_item, remove_item, has_item
+import Status
 
 def balcony():
+    Status.current_room = "main_hall"
     print("The balcony overlooks nothing but thick fog.")
     print("There is a single old armchair and a small table.")
 

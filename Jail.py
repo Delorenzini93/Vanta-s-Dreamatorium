@@ -4,6 +4,7 @@ import Status
 is_body_checked = False
 
 def jail():
+    Status.current_room = "deep_dungeons"
     global is_body_checked
 
     print("\nYou enter a silent and abandoned jail with a single cell.")

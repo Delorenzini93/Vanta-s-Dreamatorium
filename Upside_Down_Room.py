@@ -208,6 +208,7 @@ def upside_down_room4():
             print("Choose a valid action")
 ########################
 def where_to_start():
+    Status.current_room = "dungeons"
     if come_from_trophies_room:
         upside_down_room4()
     else:

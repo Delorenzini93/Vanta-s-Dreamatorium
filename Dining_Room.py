@@ -106,6 +106,7 @@ def kitchen_scene():
         kitchen_activities()
 #########################################
 def dining_room():
+    Status.current_room = "second_hall"
     global is_daylight, is_talked_to_rosmerta, is_table_looted, window_look_count
     print("\nThere's an ebony table at the center of a small room decorated with paintings")
 

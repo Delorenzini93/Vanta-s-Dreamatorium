@@ -191,6 +191,7 @@ def squaky_looking_pile_of_books():
 
 
 def flooded_library():
+    Status.current_room = "second_hall"
     global is_look_above, is_look_bookpile_right, is_look_bookpile_left
 
     print("\nYou stand before a library with piles of books as high as the ceiling")

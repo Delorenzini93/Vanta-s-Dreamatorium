@@ -9,6 +9,7 @@ is_jail_key = False
 
 
 def dungeons_library():
+    Status.current_room = "deep_dungeons"
     global is_lore, is_first_trial, is_second_trial, is_third_trial, is_jail_key
 
     print("\nYou step into the Dungeon's Library.")

@@ -86,6 +86,7 @@ def dungeons_corridor_far():
             print("Choose a valid action")
 #######################
 def dungeons_corridor_init():
+    Status.current_room = "dungeons"
     print("There's a long corridor with a door at the end of it")
 
     while True:

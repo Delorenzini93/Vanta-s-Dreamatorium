@@ -83,6 +83,7 @@ def vantas_door():
             print("Please enter a number.")
 ##############################
 def second_hall():
+    Status.current_room = "second_hall"
     print("You stand at the second hall, more spacious than the previous")
     print("sounds reverberate in a peculiar way here.")
 

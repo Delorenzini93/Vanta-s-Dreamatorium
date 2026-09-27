@@ -27,6 +27,7 @@ def zagnar_battle():
             return
 ##########################
 def dungeons_noisy_room():
+    Status.current_room = "dungeons"
     global is_cockroach, is_zagnar_down
     print("There's a gigantic cage with a black blanket covering it....furious roars comes from within!")
 

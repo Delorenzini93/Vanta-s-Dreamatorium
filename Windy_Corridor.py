@@ -120,6 +120,7 @@ def windy_corridor_day():
             print("Choose a valid action")
 #############################
 def windy_corridor():
+    Status.current_room = "second_hall"
     if Status.is_daylight:
         windy_corridor_day()
     else:

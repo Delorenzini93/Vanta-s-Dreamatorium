@@ -61,6 +61,7 @@ def fairy_interaction():
             print("Choose a valid action")
 ##################
 def cauldron_room_2F():
+    Status.current_room = "dungeons_corridor"
     global is_fairy_appear, is_second_floor_door_open
     if is_fairy_appear:
         print("The room's much quieter now")

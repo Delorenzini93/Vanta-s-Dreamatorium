@@ -176,6 +176,7 @@ def trapdoor():
             print("Choose a valid action")
 #############################
 def room_of_cauldrons():
+    Status.current_room = "dungeons_corridor"
     global is_room_checked, is_cauldron_clean, is_cabinet_checked
     print("There's a noisy, smelly and dim-lighted small circular room, unlike the others")
 

@@ -159,6 +159,7 @@ def judges_1():
                 print("Choose a valid action")
 #########################
 def dungeons_room_trial():
+    Status.current_room = "dungeons"
     print("\nThere's a small and dimly lighted room")
     print("There's also an altar with 3 very old goblins dressed in formal garments")
 

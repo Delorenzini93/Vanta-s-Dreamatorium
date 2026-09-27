@@ -126,6 +126,7 @@ def third_hall_day():
             print("Choose a valid action")
 ########################
 def third_hall():
+    Status.current_room = "third_hall"
     global is_dungeons_door_open
     if Status.is_daylight:
         is_dungeons_door_open = True

@@ -1,6 +1,6 @@
 x = "Vanta"
 place = "Garam"
-
+from inventory import add_item
 
 print(f"{x}: Tell me your name:")
 user = input("\nI...I am...")
@@ -48,5 +48,6 @@ def introduction():
           f"\nI hope you may find interesting memories here."
           f"\nI will come to pick you up when the sun rises."
           f"\nSo... the night is yours.")
+    add_item("Castle Map")
 
 introduction()

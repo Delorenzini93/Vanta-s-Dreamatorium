@@ -73,6 +73,7 @@ def wardrobe():
 
 
 def vantas_room():
+    Status.current_room = "second_hall"
     print("WOW Vanta's room is very colorful! I've never have thought it was like this!")
 
     while True:

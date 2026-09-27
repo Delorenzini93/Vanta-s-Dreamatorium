@@ -22,11 +22,17 @@ def has_item(item_name):
 def show_inventory():
     if not inventory:
         print("\nYour inventory is empty.")
+    elif has_item("Castle Map"):
+        check = input("\nView map? (y/n): ").strip().lower()
+        if check == "y":
+            import castle_map
+            castle_map.show_map()
     else:
         print("\n--- Inventory ---")
         for item in inventory:
             print(f"- {item}")
         print("----------------")
+
 
 battle_items = {
     "Potion": {"type": "heal", "value": 50, "description": "Restores 50 HP"},

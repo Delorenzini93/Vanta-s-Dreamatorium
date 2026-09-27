@@ -81,6 +81,7 @@ boticary = Shop("Old Boticary", [
 ])
 #######################################
 def old_boticary():
+    Status.current_room = "dungeons_corridor"
     print("\nThe smell of herbs and dust fills the air.")
     print("An old figure stands behind a counter covered in vials and jars.")
 

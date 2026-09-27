@@ -2,6 +2,7 @@ import Status
 import battle
 
 def shed_battle():
+    Status.current_room = "second_hall"
     print("A cold and misty smell lies before you.")
     print("Something moves in the background...")
 

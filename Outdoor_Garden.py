@@ -8,6 +8,7 @@ def farm_minigame():
     farm_menu()
 
 def outdoor_garden():
+    Status.current_room = "second_hall"
     global open_sheds_door
     print("The sun hits your eyes in a pleasing way")
     print("The smell of the morning and the sound of butterflies amuses you a bit")

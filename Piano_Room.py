@@ -1,6 +1,8 @@
 from inventory import add_item, remove_item, has_item
+import Status
 
 def piano_room():
+    Status.current_room = "main_hall"
     print("The room is dim, the piano is old and slightly out of tune with 5 drawings on it." 
           "\nOn the music stand sits a blank sheet of staff paper with only the title written in elegant handwriting:"
           "\n'The Night That Never Ended'")

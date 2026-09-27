@@ -1,6 +1,8 @@
 user = ""
 current_outfit = "Default outfit"
 
+current_room = "main_hall"
+
 souls = 0
 
 player_level = 1

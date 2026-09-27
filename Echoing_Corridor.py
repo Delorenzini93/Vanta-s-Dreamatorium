@@ -9,6 +9,7 @@ c = "Esthat"
 talked_to_gargoyle = False
 
 def echoing_puzzle():
+    Status.current_room = "second_hall"
     global talked_to_gargoyle
     print("A small, dead-ended and windowless corridor lies before you.")
     print("By your left there are 3 door each one containig a prisoner soul.")

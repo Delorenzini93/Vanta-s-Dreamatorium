@@ -101,6 +101,7 @@ def deep_dungeons_west():
             print("Choose a valid action")
 ##################################
 def deep_dungeons():
+    Status.current_room = "deep_dungeons"
     print("Another spacious section of the dungeons.I assume we're deep into the dungeons since the air is colder here")
 
     while True:
