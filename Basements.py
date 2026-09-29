@@ -29,8 +29,6 @@ def basement():
                     print("Most of the cells have caved in long ago.")
                     print("In one of the less destroyed ones, you find a skeleton still chained to the wall.")
                     print("Clutched in its bony fingers is a small leather pouch.")
-                    add_item("Old Pouch")
-                    print("You obtained 'OLD POUCH'!")
                     print("Inside you find a few coins and a strange black tooth.")
                     add_item("Black Tooth")
                     print("You obtained 'BLACK TOOTH'!")

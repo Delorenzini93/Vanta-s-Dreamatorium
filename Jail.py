@@ -19,7 +19,15 @@ def jail():
             answer = int(input("This place feels heavy... "))
 
             if answer == 1:
-                if not is_body_checked:
+                if is_body_checked and has_item("Black Tooth") and has_item("Silent Medallion"):
+                    print("\nThe SILENT MEDALLION in your pocket suddenly cracks with a terrible scream!")
+                    print("It seems... the BLACK TOOTH belonged to this fallen soldier.")
+                    remove_item("Black Tooth")
+                    remove_item("Silent Medallion")
+                    add_item("Precinct Key")
+                    print("A shimmering object appears in the soldier's pocket.")
+                    print("You obtained 'PRECINCT KEY'!")
+                elif not is_body_checked:
                     print("\nThere's a fallen soldier lying on the cold floor.")
                     print("His body has been here for a long time.")
                     print("Clear signs of torture mark his remains... poor soul.")
