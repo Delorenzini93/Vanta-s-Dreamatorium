@@ -3,9 +3,11 @@ import Status
 import Encounters
 
 is_dungeons_door_open = False
-
+is_ceiling_seen = False
+is_quote_known = False
 
 def glass_door():
+    global is_quote_known
     while True:
         print("1. Open the damaged door")
         print("2. Read the bookstand")
@@ -24,9 +26,10 @@ def glass_door():
                     Archane_Room_Night.archane_room_night()
             elif answer == 2:
                 if Status.is_daylight:
-                    print("#write something later")
+                    print("There is no good and evil.  There is only power, and those too weak to seek it.")
                 else:
-                    print("#write something later")
+                    print("Greatness inspires envy, envy engenders spite, spite spawns lies.")
+                    is_quote_known = True
             elif answer == 3:
                 print("You step away from the old door")
                 return
@@ -82,6 +85,7 @@ def third_hall_night():
             print("Choose a valid action")
 ########################
 def third_hall_day():
+    global is_ceiling_seen
     print("This Hall with shining marble floor seems more luxurious than the previous two")
     print("I got the feeling that we're getting deeper into the heart of the castle")
 
@@ -119,6 +123,7 @@ def third_hall_day():
                     print("The door is tightly shut")
             elif answer == 5:
                 print("There are beautiful birds painted all over the facade of the second floor")
+                is_ceiling_seen = True
             elif answer == 6:
                 from inventory import show_inventory
                 show_inventory()
