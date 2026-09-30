@@ -9,8 +9,6 @@ is_rosmerta_happy = False
 is_dining_table_full = False
 is_table_looted = False
 
-window_look_count = 0
-
 lady = "Madam Rosmerta"
 elf = "Winky"
 
@@ -107,7 +105,7 @@ def kitchen_scene():
 #########################################
 def dining_room():
     Status.current_room = "second_hall"
-    global is_daylight, is_talked_to_rosmerta, is_table_looted, window_look_count
+    global is_talked_to_rosmerta, is_table_looted
     print("\nThere's an ebony table at the center of a small room decorated with paintings")
 
     while True:
@@ -135,8 +133,8 @@ def dining_room():
                     print("It's empty but a strong smell of food comes from the noisy door")
                     continue
             elif answer == 2:
-                window_look_count += 1
-                if window_look_count % 2 == 0:
+                Status.window_look_count += 1
+                if Status.window_look_count % 2 == 0:
                     Status.is_daylight = True
                     print("The sun peeks through the clouds again...")
                 else:

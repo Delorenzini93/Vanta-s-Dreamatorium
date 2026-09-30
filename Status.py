@@ -24,6 +24,9 @@ current_accesory = "No Accesory"
 
 is_daylight = True
 is_candles_lit = False
+window_look_count = 0
+is_ceiling_seen = False
+
 
 enemy_defeated = {
     "dummy": False,
