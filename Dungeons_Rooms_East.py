@@ -50,7 +50,7 @@ def dungeons_corridor_closer():
             elif answer == 2:
                 Encounters.random_encounter("dungeons")
                 print("You hear distant echoes as you run...")
-                dungeons_corridor_init()
+                dungeons_corridor_far()
                 return
             elif answer == 3:
                 from inventory import show_inventory

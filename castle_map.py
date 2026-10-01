@@ -93,7 +93,20 @@ room_maps = {
 ║  ▲ Second Hall                    ║
 ╚═══════════════════════════════════╝
 """,
-    "mountainside": "",
+    "mountainside": """
+╔═══════════════════════════════════╗
+║        VANTA'S DREAMATORIUM       ║
+║        [ MOUNTAINSIDE ]           ║
+╠═══════════════════════════════════╣
+║                                   ║
+║  ROOMS:                           ║
+║  ► Mountainside                   ║
+║  ► Gorge                          ║
+║  ► Sanctuary                      ║
+║                                   ║
+║  ▼ Third Hall                     ║
+╚═══════════════════════════════════╝
+""",
 }
 
 def show_map():
