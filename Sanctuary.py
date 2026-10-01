@@ -7,6 +7,7 @@ is_cross_obtained = False
 #########################
 def sanctuary():
     global is_offering_taken, is_cross_obtained
+    Status.current_room = "mountainside"
 
     print("\nYou step into a quiet, circular chamber.")
     print("The air is still and strangely warm compared to the gorge.")
@@ -28,9 +29,9 @@ def sanctuary():
                     print("The scabbard is worn, but the weapon itself still holds a sharp presence.")
                     add_item("Katana")
                     print("You obtained 'KATANA'!")
-                    Status.current_melee_weapon = "Katana"
+                    Status.current_weapon = "Katana"
                     Status.player_attack += 35
-                    print(f"Melee Attack increased! ({Status.player_attack})")
+                    print(f"Attack increased! ({Status.player_attack})")
                     print("You equipped the Katana.")
                     is_offering_taken = True
                 else:

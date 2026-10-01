@@ -57,31 +57,53 @@ def gorge_3():
             print("Choose a valid action.")
 ############################
 def gorge_2():
-    print("Terrain's less rocky but more slippery and the atmosphere suddenly gets cold and slippery")
+    global is_winter_guardian
+
+    print("The walls grow steeper. Cold air sinks into your bones.")
 
     while True:
         print("\n1. Advance through the difficult terrain (forward)")
         print("2. Go back")
-        print("3. Check inventory")
+        print("3. Examine Winter Guardian")
+        print("4. Check inventory")
 
         try:
-            answer = int(input(""))
+            answer = int(input("Well... "))
 
             if answer == 1:
                 Encounters.random_encounter("exterior")
-                print("You hear something somewhere in the mountain but the castle gets blurry from your perspective")
+                print("Your steps echo against the freezing stone.")
                 gorge_3()
                 return
+
             elif answer == 2:
-                Encounters.random_encounter("exterior")
-                print("You hear nothing but the castle is visible from your perspective")
+                print("You go back to the previous section of the gorge.")
                 gorge()
                 return
+
             elif answer == 3:
+                if is_winter_guardian:
+                    print("\nThe Winter Guardian remains motionless.")
+                    print("Its hand is no longer empty.")
+                else:
+                    print("\nThe second statue is larger and colder to the touch.")
+                    print("It shows a stern figure wrapped in heavy cloaks, eyes closed.")
+                    print("Frost seems permanently etched into the stone.")
+                    print("Its outstretched hand is empty, waiting for an offering.")
+
+                    if has_item("Winter Anima"):
+                        print("\nYou place the WINTER ANIMA into the statue's hand.")
+                        print("A deep chill runs through the gorge as the offering is accepted.")
+                        remove_item("Winter Anima")
+                        is_winter_guardian = True
+                        print("The Winter Guardian has been appeased.")
+
+            elif answer == 4:
                 from inventory import show_inventory
                 show_inventory()
+
         except ValueError:
-            print("Choose a valid action")
+            print("Choose a valid action.")
 #######################
 def gorge():
     global is_autumn_guardian
