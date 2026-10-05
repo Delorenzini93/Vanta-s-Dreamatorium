@@ -32,8 +32,8 @@ def iron_door():
                 if is_cryptic_writing and has_item("Iron Key"):
                     remove_item("Iron Key")
                     print("The door opens with a deafening sound....the growls just stopped...I guess")
-                    import X
-                    X.x()
+                    import Boss_Room
+                    Boss_Room.boss_room()
                 else:
                     print("Unsurprisingly, the door is tightly shut")
 

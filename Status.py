@@ -39,7 +39,8 @@ enemy_defeated = {
     "Champion": False,
     "Reanimated Knight L": False,
     "Reanimated Knight R": False,
-    "Zagnar": False
+    "Zagnar": False,
+    "Mosag": False
 }
 
 def assign_stat_points():
