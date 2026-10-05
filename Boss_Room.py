@@ -5,6 +5,7 @@ import battle
 boss_name = "Mosag"
 is_weakened = False
 is_name_spoken = False
+is_mosag_dead = False
 
 def boss_fight():
     global is_weakened
@@ -30,6 +31,7 @@ def boss_fight():
         print("Then... silence.")
         print("\nThe first part of your journey in Garam ends here.")
         print("But something tells you this is far from over.")
+        is_mosag_dead = True
         import West_Hall
         West_Hall.west_hall()
     else:
