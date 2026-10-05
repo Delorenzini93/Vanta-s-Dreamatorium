@@ -17,8 +17,9 @@ def sanctuary():
     while True:
         print("\n1. Examine the offering")
         print("2. Examine the ritual")
-        print("3. Check inventory")
-        print("4. Go back to the gorge")
+        print("3. Fish in the sanctuary pond")
+        print("4. Check inventory")
+        print("5. Go back to the gorge")
 
         try:
             answer = int(input("This place feels sacred... "))
@@ -53,10 +54,13 @@ def sanctuary():
                     print("Perhaps the Guardians have not all been appeased.")
 
             elif answer == 3:
+                import fishing
+                fishing.fish("pond_3")
+            elif answer == 4:
                 from inventory import show_inventory
                 show_inventory()
 
-            elif answer == 4:
+            elif answer == 5:
                 print("You leave the Sanctuary and return to the gorge.")
                 return
 
