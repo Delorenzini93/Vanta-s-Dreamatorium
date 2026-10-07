@@ -1,11 +1,13 @@
 from inventory import add_item, remove_item, has_item
 import Status
+import os
 
 is_cells_searched = False
 is_pit_examined = False
 is_body_looted = False
 
 def basement():
+    os.system('cls')
     global is_cells_searched, is_pit_examined, is_body_looted
 
     print("\nYou descend a narrow stone staircase into the Basement.")

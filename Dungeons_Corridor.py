@@ -1,7 +1,9 @@
 from inventory import add_item, remove_item, has_item
 import Status
+import os
 
 def dungeons_corridor():
+    os.system('cls')
     Status.current_room = "dungeons_corridor"
     print("Wow, it's darker and colder down here...")
 

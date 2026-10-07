@@ -1,7 +1,9 @@
 from inventory import add_item, remove_item, has_item
 import Status
+import os
 
 def statues():
+    os.system('cls')
     Status.current_room = "main_hall"
     print("The garden is overgrown and silent. No birds, no wind. "
           "\nIn the center is a stone fountain that is completely dry."

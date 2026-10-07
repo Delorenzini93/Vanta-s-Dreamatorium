@@ -1,6 +1,7 @@
 from inventory import add_item, remove_item, has_item
 import Status
 import Encounters
+import os
 
 def marble_door_night():
     while True:
@@ -120,6 +121,7 @@ def windy_corridor_day():
             print("Choose a valid action")
 #############################
 def windy_corridor():
+    os.system('cls')
     Status.current_room = "second_hall"
     if Status.is_daylight:
         windy_corridor_day()

@@ -2,6 +2,7 @@ from inventory import add_item, remove_item, has_item
 import Status
 import battle
 import Cauldron
+import os
 
 is_talked_to_winky = False
 is_talked_to_rosmerta = False
@@ -104,6 +105,7 @@ def kitchen_scene():
         kitchen_activities()
 #########################################
 def dining_room():
+    os.system('cls')
     Status.current_room = "second_hall"
     global is_talked_to_rosmerta, is_table_looted
     print("\nThere's an ebony table at the center of a small room decorated with paintings")

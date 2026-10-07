@@ -4,6 +4,7 @@ import Status
 import Room_Of_Cauldrons
 import battle
 import Status
+import os
 
 is_trophy_examined = False
 is_champion_down = False
@@ -120,6 +121,7 @@ def hall_of_trophies_back_of_the_room():
             print("Choose a valid action")
 ###############################
 def hall_of_trophies():
+    os.system('cls')
     Status.current_room = "dungeons"
     global is_champion_down, is_trophy_examined
     print("You lay before a room so tall and full of trophies that your head gets a little dizzy...")

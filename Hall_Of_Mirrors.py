@@ -2,6 +2,7 @@ from inventory import add_item, remove_item, has_item
 import Status
 import Heroes
 import battle
+import os
 
 cuc = 'Cuchulain'
 
@@ -327,6 +328,7 @@ def west_wing():
             print("Choose a valid option")
 #############################################
 def hall_of_mirrors():
+    os.system('cls')
     Status.current_room = "dungeons_corridor"
     print("\nSeems like an old room, the oldest I've been so far...")
     print("It's full of mirrors of all kind and sizes and in varying degrees of destruction")

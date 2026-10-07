@@ -1,6 +1,7 @@
 from inventory import add_item, remove_item, has_item
 import Status
 import Encounters
+import os
 
 is_dungeons_door_open = False
 is_ceiling_seen = False
@@ -131,6 +132,7 @@ def third_hall_day():
             print("Choose a valid action")
 ########################
 def third_hall():
+    os.system('cls')
     Status.current_room = "third_hall"
     global is_dungeons_door_open
     if Status.is_daylight:

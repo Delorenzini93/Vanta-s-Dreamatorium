@@ -1,6 +1,6 @@
 from inventory import add_item, remove_item, has_item
 import Status
-
+import os
 is_eagle_key_solved = False
 is_vanta_key_solved = False
 
@@ -83,6 +83,7 @@ def vantas_door():
             print("Please enter a number.")
 ##############################
 def second_hall():
+    os.system('cls')
     Status.current_room = "second_hall"
     print("You stand at the second hall, more spacious than the previous")
     print("sounds reverberate in a peculiar way here.")

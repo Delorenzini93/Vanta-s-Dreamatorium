@@ -1,6 +1,7 @@
 from inventory import add_item, remove_item, has_item
 import Status
 import Encounters
+import os
 
 def mountainside_last():
     print("You're in total darkness and the noise is unbearable, leaving you unable to think clearly")
@@ -86,6 +87,7 @@ def mountainside_far():
             print("Choose a valid action")
 #######################
 def mountainside_init():
+    os.system('cls')
     Status.current_room = "mountainside"
     print("There's a freezing cold blowing...Seems like there's a long way from the trail")
 

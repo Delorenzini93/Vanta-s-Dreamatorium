@@ -1,7 +1,7 @@
 from inventory import add_item, remove_item, has_item
 import Status
 import Cauldron_Room_2F
-
+import os
 is_room_checked = False
 is_torches_lit = False
 is_tunnel_fully_known = False
@@ -176,6 +176,7 @@ def trapdoor():
             print("Choose a valid action")
 #############################
 def room_of_cauldrons():
+    os.system('cls')
     Status.current_room = "dungeons_corridor"
     global is_room_checked, is_cauldron_clean, is_cabinet_checked
     print("There's a noisy, smelly and dim-lighted small circular room, unlike the others")

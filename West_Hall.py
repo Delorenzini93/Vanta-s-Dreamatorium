@@ -1,9 +1,11 @@
 from inventory import add_item, remove_item, has_item
 import Status
+import os
 
 is_Vanta_spoken = False
 
 def west_hall():
+    os.system('cls')
     global is_Vanta_spoken
     if not is_Vanta_spoken:
         print(f"Vanta: Well {Status.user}, you've come a long way from the castle!")

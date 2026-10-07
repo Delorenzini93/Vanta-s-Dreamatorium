@@ -1,6 +1,6 @@
 from inventory import add_item, remove_item, has_item
 import Status
-
+import os
 x = "Gargoyle"
 a = "Asmodeus"
 b = "Chuculain"
@@ -9,6 +9,7 @@ c = "Esthat"
 talked_to_gargoyle = False
 
 def echoing_puzzle():
+    os.system('cls')
     Status.current_room = "second_hall"
     global talked_to_gargoyle
     print("A small, dead-ended and windowless corridor lies before you.")

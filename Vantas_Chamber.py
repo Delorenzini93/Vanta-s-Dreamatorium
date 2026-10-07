@@ -1,6 +1,6 @@
 from inventory import add_item, remove_item, has_item
 import Status
-
+import os
 
 def vantas_diary():
     print("...It looks like Vanta's diary....it's risky but should I leave something?")
@@ -73,6 +73,7 @@ def wardrobe():
 
 
 def vantas_room():
+    os.system('cls')
     Status.current_room = "second_hall"
     print("WOW Vanta's room is very colorful! I've never have thought it was like this!")
 

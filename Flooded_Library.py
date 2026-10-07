@@ -1,5 +1,6 @@
 from inventory import add_item, remove_item, has_item
 import Status
+import os
 
 is_look_above = False
 is_wall_pushed = False
@@ -191,6 +192,7 @@ def squaky_looking_pile_of_books():
 
 
 def flooded_library():
+    os.system('cls')
     Status.current_room = "second_hall"
     global is_look_above, is_look_bookpile_right, is_look_bookpile_left
 

@@ -1,6 +1,7 @@
 from inventory import add_item, remove_item, has_item
 import Status
 import Encounters
+import os
 
 is_autumn_guardian = False
 is_winter_guardian = False
@@ -106,6 +107,7 @@ def gorge_2():
             print("Choose a valid action.")
 #######################
 def gorge():
+    os.system('cls')
     global is_autumn_guardian
     Status.current_room = "mountainside"
 

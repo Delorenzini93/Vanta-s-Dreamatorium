@@ -1,5 +1,6 @@
 from inventory import add_item, remove_item, has_item
 import Status
+import os
 
 Book_of_Vision = False
 Book_of_Nature = False
@@ -9,6 +10,7 @@ read_all_books = False
 
 
 def reading_of_books():
+    os.system('cls')
     Status.current_room = "main_hall"
     global Book_of_Vision, Book_of_Nature, Book_of_Time, Book_of_Wisdom
     global read_all_books

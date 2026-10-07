@@ -2,6 +2,7 @@ import Third_Hall
 from inventory import add_item, remove_item, has_item
 import Status
 import Encounters
+import os
 
 is_jail_open = False
 
@@ -101,6 +102,7 @@ def deep_dungeons_west():
             print("Choose a valid action")
 ##################################
 def deep_dungeons():
+    os.system('cls')
     Status.current_room = "deep_dungeons"
     print("Another spacious section of the dungeons.I assume we're deep into the dungeons since the air is colder here")
 

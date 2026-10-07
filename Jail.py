@@ -1,9 +1,11 @@
 from inventory import add_item, remove_item, has_item
 import Status
+import os
 
 is_body_checked = False
 
 def jail():
+    os.system('cls')
     Status.current_room = "deep_dungeons"
     global is_body_checked
 

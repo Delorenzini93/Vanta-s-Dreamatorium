@@ -1,6 +1,7 @@
 from inventory import add_item, remove_item, has_item
 import Status
 import battle
+import os
 
 come_from_trophies_room = False
 is_sword_taken = False
@@ -208,6 +209,7 @@ def upside_down_room4():
             print("Choose a valid action")
 ########################
 def where_to_start():
+    os.system('cls')
     Status.current_room = "dungeons"
     if come_from_trophies_room:
         upside_down_room4()

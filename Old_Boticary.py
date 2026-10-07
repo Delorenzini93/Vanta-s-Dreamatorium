@@ -1,6 +1,7 @@
 from inventory import add_item, has_item, remove_item
 import Status
 import Cauldron
+import os
 
 is_recipe_bought = False
 
@@ -81,6 +82,7 @@ boticary = Shop("Old Boticary", [
 ])
 #######################################
 def old_boticary():
+    os.system('cls')
     Status.current_room = "dungeons_corridor"
     print("\nThe smell of herbs and dust fills the air.")
     print("An old figure stands behind a counter covered in vials and jars.")

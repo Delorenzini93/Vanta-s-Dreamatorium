@@ -3,6 +3,7 @@ import Status
 import Cauldron
 import fishing
 import Heroes
+import os
 
 aileen = "Aileen"
 boss = "Swylabur"
@@ -107,6 +108,7 @@ def aileen_talk():
 
 #####################################
 def goblin_warehouse():
+    os.system('cls')
     Status.current_room = "dungeons_corridor"
     global is_chest_open
     print("There's and old warehouse, somehow seems like an abandoned attic")

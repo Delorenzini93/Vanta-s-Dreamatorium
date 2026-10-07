@@ -1,6 +1,7 @@
 from inventory import add_item, remove_item, has_item
 import Status
 import battle
+import os
 
 boss_name = "Mosag"
 is_weakened = False
@@ -38,6 +39,7 @@ def boss_fight():
         print("GAME OVER")
 
 def boss_room():
+    os.system('cls')
     global is_weakened, is_name_spoken
 
     print("\nThe chamber is vast and lightless.")

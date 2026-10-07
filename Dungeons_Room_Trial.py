@@ -1,7 +1,7 @@
 from inventory import add_item, remove_item, has_item
 import Status
 import Heroes
-
+import os
 is_judge_gabranth = False
 is_judge_ghis = False
 is_judge_guybrook = False
@@ -159,6 +159,7 @@ def judges_1():
                 print("Choose a valid action")
 #########################
 def dungeons_room_trial():
+    os.system('cls')
     Status.current_room = "dungeons"
     print("\nThere's a small and dimly lighted room")
     print("There's also an altar with 3 very old goblins dressed in formal garments")

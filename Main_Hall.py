@@ -1,5 +1,6 @@
 from inventory import add_item, remove_item, has_item
 import Status
+import os
 
 is_flower_solved = False
 is_watch_solved = False
@@ -70,6 +71,7 @@ def door_puzzle():
 
 
 def main_hall():
+    os.system('cls')
     Status.current_room = "main_hall"
     print("An spacious and ancient hall lies before you.")
     print("The ceiling is so high that only fog is visible from beneath.")

@@ -1,11 +1,13 @@
 from inventory import add_item, remove_item, has_item
 import Status
+import os
 
 is_figure_approached = False
 is_silence_broken = False
 is_whisper_heard = False
 
 def silence_room():
+    os.system('cls')
     global is_figure_approached, is_silence_broken, is_whisper_heard
 
     print("\nYou push open a heavy door and step inside.")

@@ -1,6 +1,8 @@
 x = "Vanta"
 place = "Garam"
 from inventory import add_item
+import os
+
 
 print(f"{x}: Tell me your name:")
 user = input("\nI...I am...")
@@ -8,6 +10,7 @@ import Status
 Status.user = user
 
 def introduction():
+    os.system('cls')
 
     print("\nIt's been a long time... since the last time."
           "\nit seems like a dream from long ago..."
@@ -51,3 +54,5 @@ def introduction():
     add_item("Castle Map")
 
 introduction()
+import Main_Hall
+Main_Hall.main_hall()

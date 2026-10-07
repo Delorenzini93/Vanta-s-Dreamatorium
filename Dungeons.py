@@ -1,7 +1,7 @@
 from inventory import add_item, remove_item, has_item
 import Status
 import Encounters
-
+import os
 ######################
 def dungeons_east():
     while True:
@@ -79,6 +79,7 @@ def dungeons_forward():
             print("Choose a valid option")
 ######################
 def dungeons():
+    os.system('cls')
     Status.current_room = "deep dungeons"
     print("I can barely see a metre away...better be careful around here...")
 

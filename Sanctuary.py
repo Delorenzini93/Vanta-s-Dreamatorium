@@ -1,11 +1,14 @@
 from inventory import add_item, remove_item, has_item
 import Status
 import Gorge
+import os
+
 is_offering_taken = False
 is_cross_obtained = False
 
 #########################
 def sanctuary():
+    os.system('cls')
     global is_offering_taken, is_cross_obtained
     Status.current_room = "mountainside"
 

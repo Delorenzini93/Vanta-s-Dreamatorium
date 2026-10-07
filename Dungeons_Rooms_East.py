@@ -2,7 +2,7 @@ from inventory import add_item, remove_item, has_item
 import Status
 import Encounters
 import Hall_Of_Trophies
-
+import os
 def dungeons_corridor_last():
     print("-I....need....breathing...a bit")
 
@@ -86,6 +86,7 @@ def dungeons_corridor_far():
             print("Choose a valid action")
 #######################
 def dungeons_corridor_init():
+    os.system('cls')
     Status.current_room = "dungeons"
     print("There's a long corridor with a door at the end of it")
 

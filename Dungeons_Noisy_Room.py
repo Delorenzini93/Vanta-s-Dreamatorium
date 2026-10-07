@@ -1,7 +1,7 @@
 from inventory import add_item, remove_item, has_item
 import Status
 import battle
-
+import os
 z = 'Cockroach Dandy'
 is_cockroach = False
 is_zagnar_down = False
@@ -27,6 +27,7 @@ def zagnar_battle():
             return
 ##########################
 def dungeons_noisy_room():
+    os.system('cls')
     Status.current_room = "dungeons"
     global is_cockroach, is_zagnar_down
     print("There's a gigantic cage with a black blanket covering it....furious roars comes from within!")

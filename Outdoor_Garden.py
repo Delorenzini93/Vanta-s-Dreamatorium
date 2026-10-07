@@ -1,6 +1,7 @@
 from inventory import add_item, remove_item, has_item
 import Status
 from farm import farm_menu
+import os
 
 open_sheds_door = False
 
@@ -8,6 +9,7 @@ def farm_minigame():
     farm_menu()
 
 def outdoor_garden():
+    os.system('cls')
     Status.current_room = "second_hall"
     global open_sheds_door
     print("The sun hits your eyes in a pleasing way")

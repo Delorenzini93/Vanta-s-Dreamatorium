@@ -2,6 +2,7 @@ from inventory import add_item, remove_item, has_item
 import Status
 import Third_Hall
 import Boss_Room
+import os
 
 is_door_examined = False
 is_cryptic_writing = False
@@ -50,6 +51,7 @@ def iron_door():
             print("Choose a valid action")
 
 def corridor_with_many_windows():
+    os.system('cls')
     Status.current_room = "third_hall"
     print("Seems like the corridor's walls are entirely made by windows")
 

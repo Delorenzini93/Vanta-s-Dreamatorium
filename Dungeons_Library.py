@@ -1,6 +1,6 @@
 from inventory import add_item, remove_item, has_item
 import Status
-
+import os
 is_lore = False
 is_first_trial = False
 is_second_trial = False
@@ -9,6 +9,7 @@ is_jail_key = False
 
 
 def dungeons_library():
+    os.system('cls')
     Status.current_room = "deep_dungeons"
     global is_lore, is_first_trial, is_second_trial, is_third_trial, is_jail_key
 
