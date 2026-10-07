@@ -1,19 +1,22 @@
+from inventory import add_item, remove_item, has_item
 import Status
 import battle
 
 def shed_battle():
     Status.current_room = "second_hall"
-    print("A cold and misty smell lies before you.")
-    print("Something moves in the background...")
+
 
     if not Status.enemy_defeated["dummy"]:
-        print("\nA training dummy emerges from the dark.")
+        print("\nA cold and misty smell lies before you.")
+        print("Something moves in the background...")
+        print("A training dummy emerges from the dark.")
         print("It seems like a good place to practice...")
 
         result = battle.battle(
             enemy_name="Training Dummy",
-            enemy_hp=200,
+            enemy_hp=100,
             enemy_attack=0
+
         )
 
         if result:

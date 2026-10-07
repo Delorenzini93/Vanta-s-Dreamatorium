@@ -133,5 +133,3 @@ def deep_dungeons():
                 show_inventory()
         except ValueError:
             print("Choose a valid action")
-#########################
-deep_dungeons()

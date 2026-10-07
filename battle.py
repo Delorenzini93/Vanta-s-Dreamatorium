@@ -78,16 +78,15 @@ def battle(enemy_name, enemy_hp, enemy_attack, enemy_souls=0, enemy_exp=0):
                 print("Enter a valid number.")
 
         else:
-            cpu_choice = random.randint(1, 2)
-            name, damage = attacks[cpu_choice]
-            actual_damage = max(0, damage - Status.player_defense)
+            actual_damage = max(0, enemy_attack - Status.player_defense)
             player_hp -= actual_damage
-            print(f"\n{enemy_name} uses {name}! You take {actual_damage} damage.")
+            print(f"\n{enemy_name} attacks! You take {actual_damage} damage.")
             turn = "player"
 
     if player_hp <= 0:
         print(f"\nYou were defeated by {enemy_name}...")
-        return False
+        print("GAME OVER")
+        Status.sys.exit()
     else:
         print(f"\n{enemy_name} was defeated!")
         Status.player_hp = player_hp

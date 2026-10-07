@@ -180,5 +180,3 @@ def dining_room():
                 show_inventory()
         except ValueError:
             print("Choose a valid option")
-#####################
-dining_room()

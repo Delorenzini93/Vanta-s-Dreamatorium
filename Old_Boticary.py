@@ -143,5 +143,3 @@ def old_boticary():
 
         except ValueError:
             print("Enter a valid number.")
-
-old_boticary()

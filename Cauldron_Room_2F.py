@@ -101,5 +101,3 @@ def cauldron_room_2F():
     else:
         fairy_interaction()
         is_fairy_appear = True
-#################
-cauldron_room_2F()

@@ -52,5 +52,3 @@ def statues():
 
         except ValueError:
             print("Please enter a number.")
-
-statues()

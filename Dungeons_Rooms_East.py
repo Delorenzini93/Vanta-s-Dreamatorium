@@ -18,7 +18,6 @@ def dungeons_corridor_last():
             if answer == 1:
                 print("You open and pass through the Oak Door")
                 Hall_Of_Trophies.hall_of_trophies()
-                return
             elif answer == 2:
                 Encounters.random_encounter("dungeons")
                 print("You hear loud angry voices as you run...")
@@ -111,5 +110,3 @@ def dungeons_corridor_init():
                 show_inventory()
         except ValueError:
             print("Choose a valid action")
-################
-dungeons_corridor_init()

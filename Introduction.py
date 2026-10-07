@@ -12,6 +12,7 @@ Status.user = user
 def introduction():
     os.system('cls')
 
+
     print("\nIt's been a long time... since the last time."
           "\nit seems like a dream from long ago..."
           "\nso distant yet so clear....everything seems foggy now."

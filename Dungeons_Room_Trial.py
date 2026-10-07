@@ -187,5 +187,3 @@ def dungeons_room_trial():
                 show_inventory()
         except ValueError:
             print("Choose a valid action")
-###################
-dungeons_room_trial()

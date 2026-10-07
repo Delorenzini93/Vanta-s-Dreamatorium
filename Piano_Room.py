@@ -73,5 +73,3 @@ def piano_puzzle():
         print("\nThe notes sound wrong... the piano remains silent.")
         print("You should try again later.")
         return False
-
-piano_room()

@@ -60,5 +60,3 @@ def dungeons_corridor():
 
         except ValueError:
             print("Choose a valid action")
-############################
-dungeons_corridor()

@@ -1,6 +1,6 @@
 from inventory import add_item, remove_item, has_item
 import Status
-from farm import farm_menu
+from Farm import farm_menu
 import os
 
 open_sheds_door = False
@@ -57,6 +57,3 @@ def outdoor_garden():
                 print("Choose either the farm or the shed's door")
         except ValueError:
             print("Enter a valid action")
-
-
-outdoor_garden()

@@ -141,5 +141,3 @@ def goblin_warehouse():
                 show_inventory()
         except ValueError:
             print("Please enter a valid action")
-##################################################
-goblin_warehouse()

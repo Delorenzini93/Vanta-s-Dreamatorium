@@ -89,5 +89,3 @@ def echoing_puzzle():
             print("Please enter a number between 1 to 5")
 
     print("\nYou have found the truth about the Terrible Fire.")
-
-echoing_puzzle()

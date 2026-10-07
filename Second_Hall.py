@@ -121,8 +121,8 @@ def second_hall():
 
             elif answer == 5:
                 print("\nThe door leading to the Dungeon's Corridors opens")
-                import Dungeons_Corridors
-                Dungeons_Corridors.dungeons_corridors()
+                import Dungeons_Corridor
+                Dungeons_Corridor.dungeons_corridor()
 
             elif answer == 6:
                 print("\nThe door leading to the Echoing Corridor opens")

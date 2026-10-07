@@ -1,4 +1,3 @@
-from Upside_Down_Room import come_from_trophies_room
 from inventory import add_item, remove_item, has_item
 import Status
 import Room_Of_Cauldrons
@@ -85,8 +84,7 @@ def hall_of_trophies_back_of_the_room():
                 if is_champion_down:
                     print("The door leading to the Upside Down Room is now open...")
                     import Upside_Down_Room
-                    Upside_Down_Room.come_from_trophies_room = True
-                    Upside_Down_Room.upside_down_room4()
+                    Upside_Down_Room.where_to_start(from_trophies=True)
                 else:
                     print("A special kind of magic is binding the door preventing access")
                     return
@@ -159,5 +157,3 @@ def hall_of_trophies():
                 show_inventory()
         except ValueError:
             print("Choose a valid action")
-########################
-hall_of_trophies()

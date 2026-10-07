@@ -1,3 +1,5 @@
+import sys
+
 user = ""
 current_outfit = "Default outfit"
 

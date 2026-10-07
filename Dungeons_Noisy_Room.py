@@ -72,5 +72,3 @@ def dungeons_noisy_room():
                 show_inventory()
         except ValueError:
             print("Choose a valid action")
-##########################
-dungeons_noisy_room()

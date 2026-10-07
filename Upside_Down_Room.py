@@ -3,7 +3,6 @@ import Status
 import battle
 import os
 
-come_from_trophies_room = False
 is_sword_taken = False
 dragon_switch_up = False
 mermaid_switch_down = False
@@ -208,12 +207,10 @@ def upside_down_room4():
         except ValueError:
             print("Choose a valid action")
 ########################
-def where_to_start():
+def where_to_start(from_trophies=False):
     os.system('cls')
     Status.current_room = "dungeons"
-    if come_from_trophies_room:
+    if from_trophies:
         upside_down_room4()
     else:
         upside_down_room1()
-########################
-where_to_start()

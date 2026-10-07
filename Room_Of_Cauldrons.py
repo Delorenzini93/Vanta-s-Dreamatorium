@@ -238,5 +238,3 @@ def room_of_cauldrons():
                 show_inventory()
         except ValueError:
             print("Choose a valid action")
-#######################################
-room_of_cauldrons()

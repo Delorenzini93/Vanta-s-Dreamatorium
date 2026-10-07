@@ -65,5 +65,3 @@ def balcony():
 
         except ValueError:
             print("Please enter a number.")
-
-balcony()

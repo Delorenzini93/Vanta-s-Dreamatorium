@@ -19,7 +19,7 @@ def dungeons_east():
             elif answer == 2:
                 print("You open the door that lies to your left")
                 import Upside_Down_Room
-                Upside_Down_Room.where_to_start()
+                Upside_Down_Room.where_to_start(from_trophies=False)
             elif answer == 3:
                 Encounters.random_encounter("dungeons")
                 print("You go back at the beginning of the dungeons")
@@ -113,5 +113,4 @@ def dungeons():
                 show_inventory()
         except ValueError:
             print("Choose a valid action")
-#############################
 dungeons()

@@ -64,5 +64,3 @@ def reading_of_books():
             print("Please enter a number.")
 
     print("\nYou have found everything the library is willing to give you... for now.")
-
-reading_of_books()

@@ -361,5 +361,3 @@ def hall_of_mirrors():
                 show_inventory()
         except ValueError:
             print("Choose a valid option")
-#################
-hall_of_mirrors()
