@@ -46,7 +46,7 @@ room_maps = {
 ╠═══════════════════════════════════╣
 ║                                   ║
 ║  ROOMS:                           ║
-║  ►  Archane Room                  ║
+║  ► Archane Room                   ║
 ║  ► Deep Dungeons                  ║
 ║  ▲ Corridor with Many Windows     ║ 
 ║  ▼ Windy Corridor                 ║
