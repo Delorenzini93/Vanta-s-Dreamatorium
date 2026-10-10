@@ -44,8 +44,8 @@ def west_hall():
                 import World_Heritage_Room
                 World_Heritage_Room.world_heritage_room()
             elif answer == 5:
-                import West_Hall_2F
-                West_Hall_2F.west_hall_2F()
+                import Piano_Nobile
+                Piano_Nobile.piano_nobile()
             elif answer == 6:
                 print("You went to the Corridor with Many Windows")
                 import Corridor_With_Many_Windows

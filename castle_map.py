@@ -107,6 +107,23 @@ room_maps = {
 ║  ▼ Third Hall                     ║
 ╚═══════════════════════════════════╝
 """,
+    "west_hall": """
+╔═══════════════════════════════════╗
+║        VANTA'S DREAMATORIUM       ║
+║           [ WEST HALL ]           ║
+╠═══════════════════════════════════╣
+║                                   ║
+║  ROOMS:                           ║
+║  ► World Heritage Room            ║
+║  ► Weather Forecast Room          ║
+║  ► Factory Sabotage Room          ║
+║  ► Botanical Classroom            ║
+║     └ → Patio                     ║
+║                                   ║
+║  ▼ Corridor with Many Windows     ║
+║  ▲ West Hall Piano Nobile         ║
+╚═══════════════════════════════════╝
+""",
 }
 
 def show_map():
