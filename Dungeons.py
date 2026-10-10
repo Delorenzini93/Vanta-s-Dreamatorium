@@ -42,7 +42,7 @@ def dungeons_west():
                     import Dungeons_Secret_Room
                     Dungeons_Secret_Room.dungeons_secret_room()
                 else:
-                    print("A powerful magic prevents the door from opening")
+                    print("A powerful shadow prevents the door from opening")
             elif answer == 2:
                 print("You open the door that lies to your left")
                 import Dungeons_Room_Trial
