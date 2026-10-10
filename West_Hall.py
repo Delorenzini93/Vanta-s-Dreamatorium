@@ -6,7 +6,7 @@ is_Vanta_spoken = False
 
 def west_hall():
     os.system('cls')
-    Status.current_room = "west hall"
+    Status.current_room = "west_hall"
     global is_Vanta_spoken
     if not is_Vanta_spoken:
         print(f"Vanta: Well {Status.user}, you've come a long way from the castle!")

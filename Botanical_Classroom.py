@@ -9,7 +9,7 @@ is_puzzle_solved = False
 
 def botanical_classroom():
     os.system('cls')
-    Status.current_room = "west hall"
+    Status.current_room = "west_hall"
     global is_spring_anima_taken, sequence, is_puzzle_solved
 
     print("\nYou enter a spacious botanical classroom.")
