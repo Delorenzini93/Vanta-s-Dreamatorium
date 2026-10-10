@@ -39,7 +39,19 @@ room_maps = {
 ║  ▲ Main Hall                      ║
 ╚═══════════════════════════════════╝
 """,
-    "third_hall": "",
+        "third_hall": """
+╔═══════════════════════════════════╗
+║        VANTA'S DREAMATORIUM       ║
+║           [ THIRD HALL ]          ║
+╠═══════════════════════════════════╣
+║                                   ║
+║  ROOMS:                           ║
+║  ►  Archane Room                  ║
+║  ► Deep Dungeons                  ║
+║  ▲ Corridor with Many Windows     ║ 
+║  ▼ Windy Corridor                 ║
+╚═══════════════════════════════════╝
+""",
     "dungeons": """
 ╔═══════════════════════════════════╗
 ║        VANTA'S DREAMATORIUM       ║
