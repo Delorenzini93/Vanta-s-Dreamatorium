@@ -25,12 +25,12 @@ def piano_nobile():
                 West_Hall_Store.west_hall_store()
             elif answer == 2:
                 print("You enter through the second door")
-                import Ton_Room
-                Ton_Room.ton_room()
+                import Jesters_Room
+                Jesters_Room.jesters_room()
             elif answer == 3:
                 print("You enter through the third door")
-                import Zon_Room
-                Zon_Room.zon_room()
+                import Sorrow_Room
+                Sorrow_Room.sorrow_room()
             elif answer == 4:
                 print("You run along the hall and reach the Third Hall's second floor")
                 import Third_Floor_2F

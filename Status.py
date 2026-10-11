@@ -29,6 +29,8 @@ is_candles_lit = False
 window_look_count = 0
 is_ceiling_seen = False
 is_cross_used = False
+is_blue_blood_baby = False
+
 
 enemy_defeated = {
     "dummy": False,
