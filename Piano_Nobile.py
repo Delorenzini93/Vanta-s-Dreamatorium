@@ -4,7 +4,7 @@ import os
 
 def piano_nobile():
     os.system('cls')
-    Status.current_room = "west_hall"
+    Status.current_room = "west_hall_2F"
 
     print("\nThe second floor has a distinct French style")
     print("A short hall, with 3 doors at your left side and windows overlooking the mountains at your right side")
@@ -29,8 +29,8 @@ def piano_nobile():
                 Jesters_Room.jesters_room()
             elif answer == 3:
                 print("You enter through the third door")
-                import Sorrow_Room
-                Sorrow_Room.sorrow_room()
+                import Spare_Room
+                Spare_Room.spare_room()
             elif answer == 4:
                 print("You run along the hall and reach the Third Hall's second floor")
                 import Third_Floor_2F

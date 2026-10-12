@@ -8,7 +8,7 @@ items_given = False
 
 def jesters_room():
     os.system('cls')
-    Status.current_room = "west_hall"
+    Status.current_room = "west_hall_2F"
     global jester_stage, ton_last_answer, items_given
 
     print("\nYou enter a colorful but messy room.")
