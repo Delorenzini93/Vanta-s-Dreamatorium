@@ -3,6 +3,7 @@ import Status
 import Cauldron
 import os
 
+is_store_inspected = False
 is_recipe_bought = False
 
 def boticary_recipe():
@@ -82,6 +83,7 @@ boticary = Shop("Old Boticary", [
 ])
 #######################################
 def old_boticary():
+    global is_store_inspected
     os.system('cls')
     Status.current_room = "dungeons_corridor"
     print("\nThe smell of herbs and dust fills the air.")
