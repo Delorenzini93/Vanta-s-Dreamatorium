@@ -33,8 +33,8 @@ def piano_nobile():
                 Spare_Room.spare_room()
             elif answer == 4:
                 print("You run along the hall and reach the Third Hall's second floor")
-                import Third_Floor_2F
-                Third_Floor_2F.third_floor_2F()
+                import Third_Hall_2F
+                Third_Hall_2F.third_hall_2F()
             elif answer == 5:
                 print("You go down backstairs")
                 return

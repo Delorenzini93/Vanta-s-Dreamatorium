@@ -32,6 +32,8 @@ is_cross_used = False
 is_blue_blood_baby = False
 is_firework_used = False
 is_gargoyle_password = False
+is_quote_known = False
+is_bell_ring = False
 
 enemy_defeated = {
     "dummy": False,
