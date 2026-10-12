@@ -30,7 +30,8 @@ window_look_count = 0
 is_ceiling_seen = False
 is_cross_used = False
 is_blue_blood_baby = False
-
+is_firework_used = False
+is_gargoyle_password = False
 
 enemy_defeated = {
     "dummy": False,
