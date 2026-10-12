@@ -2,10 +2,7 @@ from inventory import add_item, remove_item, has_item
 import Status
 import os
 
-is_vent_searched = False
-
 def castle_tunnels():
-    global is_vent_searched
     os.system('cls')
     Status.current_room = "castle_tunnels"
 
@@ -14,39 +11,28 @@ def castle_tunnels():
     print("Metal walls press against your shoulders and the air is stale and warm.")
 
     while True:
-        print("1. Search the duct")
-        print("2. Climb up to the small roof")
-        print("3. Crawl toward the King's chamber")
-        print("4. Go back to the spare room")
-        print("5. Check inventory")
+        print("\n1. Climb up to the small roof")
+        print("2. Crawl toward the King's chamber")
+        print("3. Go back to the spare room")
+        print("4. Check inventory")
 
         try:
             answer = int(input("The metal creaks under your weight... "))
 
             if answer == 1:
-                if not is_vent_searched:
-                    print("\nYou feel around in the darkness.")
-                    print("Your hand touches something cold and metallic.")
-                    add_item("Old Screwdriver")
-                    print("You obtained 'OLD SCREWDRIVER'!")
-                    is_vent_searched = True
-                else:
-                    print("\nThere's nothing else here.")
-
-            elif answer == 2:
                 small_roof()
 
-            elif answer == 3:
+            elif answer == 2:
                 near_kings_chamber()
 
-            elif answer == 4:
+            elif answer == 3:
                 print("\nYou struggle backwards through the duct...")
                 print("After a while, you drop back into the spare room.")
                 import Spare_Room
                 Spare_Room.spare_room()
                 return
 
-            elif answer == 5:
+            elif answer == 4:
                 from inventory import show_inventory
                 show_inventory()
 
