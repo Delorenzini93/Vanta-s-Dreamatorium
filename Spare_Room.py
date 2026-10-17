@@ -25,8 +25,8 @@ def spare_room():
                 if not is_room_checked:
                     print("This room seems like abandoned or forgotten part of the castle...a bit uncanny to be honest")
                     print("There's what seems like an elegant garment lying on the corner")
-                    add_item("King's clothes")
-                    print("You obtain 'KING'S CLOTHES!")
+                    add_item("Royal Guard's clothes")
+                    print("You obtain 'ROYAL GUARD'S CLOTHES!")
                     is_room_checked = True
                 else:
                     print("\nThe room remains quiet and dusty.")
