@@ -26,6 +26,7 @@ current_accesory = "No Accesory"
 
 heritage_choice = None
 
+is_raining = False
 is_daylight = True
 is_candles_lit = False
 window_look_count = 0
