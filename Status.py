@@ -40,6 +40,7 @@ is_bell_ring = False
 is_royal_clothes_worn = False
 carrying_blue_blood_baby = False
 carrying_normal_baby = False
+jesters_dilemma_solved = False
 
 enemy_defeated = {
     "dummy": False,
