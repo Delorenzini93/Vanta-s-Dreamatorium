@@ -32,7 +32,6 @@ is_candles_lit = False
 window_look_count = 0
 is_ceiling_seen = False
 is_cross_used = False
-is_blue_blood_baby = False
 is_firework_used = False
 is_gargoyle_password = False
 is_quote_known = False

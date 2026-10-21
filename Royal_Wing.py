@@ -2,7 +2,10 @@ from inventory import add_item, remove_item, has_item
 import Status
 import os
 
+is_kings_chamber_open = False
+
 def royal_wing():
+    global is_kings_chamber_open
     os.system('cls')
     Status.current_room = "royal_wing"
 
@@ -34,8 +37,17 @@ def royal_wing():
                     print("2. Stay in the hall")
                     choice = int(input("> "))
                     if choice == 1:
-                        import Kings_Room
-                        Kings_Room.kings_room()
+                        if is_kings_chamber_open:
+                            import Kings_Room
+                            Kings_Room.kings_room()
+                        elif has_item('Kings Chamber Key'):
+                            print("You used the key the Jesters gave you")
+                            remove_item('Kings Chamber Key')
+                            is_kings_chamber_open = True
+                            import Kings_Room
+                            Kings_Room.kings_room()
+                        else:
+                            print("It's locked with key")
                 else:
                     print("\nA stern guard stands firmly in front of the King's Room.")
                     print("He blocks the way with his spear and shakes his head.")

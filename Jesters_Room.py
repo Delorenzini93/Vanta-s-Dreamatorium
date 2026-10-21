@@ -47,7 +47,7 @@ def talk_to_ton():
 
     print("\nYou approach Ton. He forces a wide smile.")
 
-    if Status.is_blue_blood_baby:
+    if Status.jesters_dilemma_solved:
         print('Ton: "You actually did it... the babies are back where they belong."')
         print('Ton: "We owe you our lives."')
         if not has_item("Jesters Gun"):
@@ -128,7 +128,7 @@ def talk_to_zon():
 
     print("\nYou approach Zon. He narrows his eyes.")
 
-    if Status.is_blue_blood_baby:
+    if Status.jesters_dilemma_solved:
         print('Zon: "I still can’t believe you fixed our mess."')
         print('Zon: "Maybe you’re not as useless as you look."')
         return
@@ -168,7 +168,7 @@ def listen_to_them():
 
     print("\nYou stay quiet and listen.")
 
-    if Status.is_blue_blood_baby:
+    if Status.jesters_dilemma_solved:
         print("Zon and Ton look much calmer than before.")
         print("They even share a quiet, relieved smile.")
         return
