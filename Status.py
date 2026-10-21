@@ -25,7 +25,8 @@ current_boots = "No Boots"
 current_accesory = "No Accesory"
 
 heritage_choice = None
-
+knows_spanish_language = False
+knows_soviet_language = False
 is_raining = False
 is_daylight = True
 is_candles_lit = False
