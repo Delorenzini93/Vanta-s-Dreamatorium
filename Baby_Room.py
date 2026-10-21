@@ -15,7 +15,9 @@ def baby_room():
         try:
             answer = int(input("> "))
             if answer == 1:
-                if Status.carrying_blue_blood_baby:
+                if Status.jesters_dilemma_solved:
+                    print("Why woul I want to do that? Also, I'm not carrying any baby with me")
+                elif Status.carrying_blue_blood_baby:
                     print("You swiftly swaped both babies, now the true King's baby is in the royal chamber!")
                     Status.carrying_normal_baby = True
                     Status.carrying_blue_blood_baby = False
