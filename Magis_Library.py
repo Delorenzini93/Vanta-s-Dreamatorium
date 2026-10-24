@@ -131,6 +131,7 @@ def canterbury_section():
                 print("Why you had to leave there? Hanging in my infant air?")
             elif answer ==3:
                 print("Change returns success\nGoing and coming without error\nAction brings good fortune")
+                Status.is_chapter_24_known = True
             elif answer ==4:
                 return
         except ValueError:

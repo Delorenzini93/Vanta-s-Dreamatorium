@@ -43,6 +43,7 @@ carrying_normal_baby = False
 jesters_dilemma_solved = False
 knows_moljat = False
 is_ghost_hostile = False
+is_chapter_24_known = False
 
 
 enemy_defeated = {
