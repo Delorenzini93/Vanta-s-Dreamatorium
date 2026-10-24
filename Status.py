@@ -42,7 +42,7 @@ carrying_blue_blood_baby = False
 carrying_normal_baby = False
 jesters_dilemma_solved = False
 knows_moljat = False
-
+is_ghost_hostile = False
 
 
 enemy_defeated = {
