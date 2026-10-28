@@ -11,6 +11,10 @@ enemy_pools = {
         {"name": "Wyvern", "hp": 80, "attack": 15},
         {"name": "Galerian", "hp": 70, "attack": 14},
     ],
+    "royal_dungeons": [
+        {"name": "Troll", "hp": 130, "attack": 25},
+        {"name": "Scorpion", "hp": 120, "attack": 24},
+    ],
 }
 
 
