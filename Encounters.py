@@ -40,3 +40,19 @@ def random_encounter(zone, chance=30):
 
     if not result:
         print("GAME OVER")
+
+def forced_encounter(zone):
+    pool = enemy_pools.get(zone, [])
+    if not pool:
+        return True
+
+    enemy = random.choice(pool)
+    print(f"\nA {enemy['name']} lunges from the dark!")
+
+    return battle.battle(
+        enemy_name=enemy["name"],
+        enemy_hp=enemy["hp"],
+        enemy_attack=enemy["attack"],
+        enemy_souls=enemy.get("souls", 0),
+        enemy_exp=enemy.get("exp", 0)
+    )
