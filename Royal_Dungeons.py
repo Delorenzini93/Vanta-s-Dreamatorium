@@ -58,14 +58,24 @@ def royal_dungeons_forward():
                     import Right_Path
                     Right_Path.right_path()
                 else:
-                    print("A powerful shadow prevents the door from opening")
+                    print("You push against the Day Door.")
+                    print("A heavy resistance answers you.")
+                    print("The surface feels warm for a moment, then turns ice-cold.")
+                    print("A voice that is not a voice whispers:")
+                    print("\"Only those who walk under the sun may pass.\"")
+                    print("The door remains sealed.")
             elif answer == 2:
                 if not Status.is_daylight:
                     print("You open the door that lies to your left")
                     import Left_Path
                     Left_Path.left_path()
                 else:
-                    print("A powerful magic prevents the door from opening")
+                    print("You push against the Night Door.")
+                    print("Shadows coil across its surface like living smoke.")
+                    print("A low, almost amused pressure pushes back against your hands.")
+                    print("From somewhere inside the wood, a soft voice murmurs:")
+                    print("\"This path belongs to the dark. Return when the light has fled.\"")
+                    print("The door does not open.")
             elif answer ==3:
                 print("\nSIGN OF THE TIMES:")
                 print("\nAt the LEFT PATH opens only to the dwellers of the night")
@@ -84,12 +94,15 @@ def royal_dungeons_forward():
 def royal_dungeons():
     os.system('cls')
     Status.current_room = "royal_dungeons"
-    print("I can barely see a metre away...better be careful around here...")
+    print("\nYou descend into the Royal Dungeons.")
+    print("The air turns cold and damp. Torchlight barely cuts through the darkness.")
+    print("Stone walls press in from both sides, and every sound feels too loud.")
+    print("Something old and watchful lingers in these corridors...")
 
     while True:
         print("1. Move north")
-        print("2. Move east")
-        print("3. Move west")
+        print("2. Move west")
+        print("3. Move east")
         print("4. Go back")
         print("5. Check inventory")
 
