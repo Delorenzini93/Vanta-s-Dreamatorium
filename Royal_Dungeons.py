@@ -12,9 +12,13 @@ def royal_dungeons_east():
             answer = int(input("We moved east, where do we go now?"))
 
             if answer == 1:
-                print("You open the iron door that lies in front of you")
-                import Trial_Dungeon
-                Trial_Dungeon.trial_dungeon()
+                if Status.trial_dungeon_completed:
+                    print("The iron door is sealed shut.")
+                    print("Whatever waited behind it has already passed judgment.")
+                else:
+                    print("You open the iron door that lies in front of you.")
+                    import Trial_Dungeon
+                    Trial_Dungeon.trial_dungeon()
             elif answer == 2:
                 Encounters.random_encounter("royal_dungeons")
                 print("You go back at the beginning of the Royal Dungeons")
