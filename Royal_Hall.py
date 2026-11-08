@@ -50,8 +50,8 @@ def royal_hall():
                     print("It is now night.")
             elif answer == 5:
                 print("You go past the hall and reach a spacious room")
-                import Royal_Hub_A
-                Royal_Hub_A.royal_hub_a()
+                import Living_Room_A
+                Living_Room_A.living_room_a()
             elif answer == 6:
                 print("You leave the Royal Hall.")
                 return
