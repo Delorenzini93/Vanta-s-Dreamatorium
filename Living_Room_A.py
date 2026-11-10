@@ -5,7 +5,7 @@ import os
 
 def living_room_a():
     os.system('cls')
-    Status.current_room = "living_room_a"
+    Status.current_room = "royal court"
 
     print("\nYou step into Living Room A.")
     print("Elegant but decaying furniture fills the space.")
