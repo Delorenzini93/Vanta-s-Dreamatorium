@@ -14,7 +14,6 @@ def royal_room_e():
         print("The room is filled with screaming ghosts.")
         print("Their voices are sharp, overlapping, unbearable.")
         print("You are forced to stumble back into the hall.")
-        input("\nPress Enter to continue...")
         return
 
     print("\nYou enter a muted room.")
@@ -48,8 +47,8 @@ def royal_room_e():
                         print("1. Take the Candle of Silence")
                         print("2. Leave it")
                         try:
-                            choice = int(input("> "))
-                            if choice == 1:
+                            answer = int(input("> "))
+                            if answer == 1:
                                 add_item("Candle of Silence")
                                 is_candle_silence_taken = True
                                 print("You obtained 'CANDLE OF SILENCE'!")
