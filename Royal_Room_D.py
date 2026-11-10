@@ -7,7 +7,7 @@ is_candle_ashes_taken = False
 def royal_room_d():
     global is_candle_ashes_taken
     os.system('cls')
-    Status.current_room = "royal_room_d"
+    Status.current_room = "royal_catacombs"
 
     if Status.heritage_choice != "Child's Drawing":
         print("\nYou open the door and immediately regret it.")
@@ -55,7 +55,7 @@ def royal_room_d():
                                 print("Choose a valid action")
 
                 elif answer == 3:
-                    print("You return to Hall 2.")
+                    print("You return to Royal Hall")
                     return
 
                 elif answer == 4:
