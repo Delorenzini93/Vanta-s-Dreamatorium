@@ -46,6 +46,7 @@ is_ghost_hostile = False
 is_chapter_24_known = False
 is_royal_court_intro_played = False
 trial_dungeon_completed = False
+living_room_a_cleared = False
 
 
 enemy_defeated = {
