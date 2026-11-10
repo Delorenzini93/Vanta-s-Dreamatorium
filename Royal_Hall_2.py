@@ -40,9 +40,12 @@ def royal_hall_2():
                 Royal_Room_F.royal_room_f()
 
             elif answer == 4:
-                print("You descend into the Royal Catacombs...")
-                import Royal_Catacombs
-                Royal_Catacombs.royal_catacombs()
+                if not Status.is_daylight:
+                    print("You descend into the Royal Catacombs...")
+                    import Royal_Catacombs
+                    Royal_Catacombs.royal_catacombs()
+                else:
+                    print("The catacombs are only accesible during night time")
 
             elif answer == 5:
                 if Status.living_room_a_cleared and Status.living_room_b_cleared:
