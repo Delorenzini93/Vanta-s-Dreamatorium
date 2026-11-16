@@ -23,7 +23,7 @@ def dungeons_east():
             elif answer == 3:
                 Encounters.random_encounter("dungeons")
                 print("You go back at the beginning of the dungeons")
-                dungeons()
+                return
         except ValueError:
             print("Choose a valid option")
 ######################
@@ -50,7 +50,7 @@ def dungeons_west():
             elif answer == 3:
                 Encounters.random_encounter("dungeons")
                 print("You go back at the beginning of the dungeons")
-                dungeons()
+                return
         except ValueError:
             print("Choose a valid option")
 ######################
@@ -74,7 +74,7 @@ def dungeons_forward():
             elif answer == 3:
                 Encounters.random_encounter("dungeons")
                 print("You go back at the beginning of the dungeons")
-                dungeons()
+                return
         except ValueError:
             print("Choose a valid option")
 ######################
@@ -85,8 +85,8 @@ def dungeons():
 
     while True:
         print("1. Move north")
-        print("2. Move east")
-        print("3. Move west")
+        print("2. Move west")
+        print("3. Move east")
         print("4. Go back")
         print("5. Check inventory")
 
